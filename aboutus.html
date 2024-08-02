@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat:wght@700&display=swap">
+    <!-- Add this in the <head> section of your HTML -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap">
+
+<title>Document</title>
+    <style>
+
+
+        body {
+    font-family: Arial, sans-serif;
+    font-size: 26px; /* Increase base font size */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px; /* Reduced padding for a smaller container */
+    background-image: url('boo.jpg'); /* Replace with your background image path */
+    background-size: cover; /* Ensures the background image covers the container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    min-height: 400px; /* Adjust height to make the container smaller */
+    width: 100%; /* Full width of the parent */
+    box-sizing: border-box; /* Includes padding in the width calculation */
+    margin-top: 3px;
+    
+}
+
+.logo {
+    width: 25%; /* Adjust width of logos */
+    max-width: 250px; /* Adjust max width */
+    margin: 0 15px; /* Reduced margin between logos and text */
+}
+
+.text-container {
+    flex: 1;
+    text-align: center;
+    font-size: 22px; /* Adjusted text size */
+    font-family: 'heebo';
+    
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Reduced padding on mobile */
+        min-height: 300px; /* Adjust height for mobile view */
+    }
+
+    .logo {
+        width: 60%; /* Adjust width of logos on mobile */
+        max-width: none;
+        margin: 10px 0;
+    }
+
+    .text-container {
+        font-size: 18px; /* Adjust text size for mobile */
+        padding: 0 10px; /* Reduced padding for mobile */
+    }
+}
+
+.about-us-box {
+    background-color: #333; /* Dark background color for the box */
+    color: white; /* White text color */
+    text-align: center;
+    padding: 15px; /* Reduced padding for a smaller box */
+    font-size: 28px; /* Slightly smaller font size */
+    font-weight: bold; /* Bold text */
+    font-family: 'Montserrat', sans-serif; /* Modern and elegant font family */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust shadow for a smaller box */
+    margin: 0; /* Remove margin to ensure full width */
+    border: 2px solid #fff; /* Thinner border to match the reduced size */
+    letter-spacing: 2px; /* Maintain letter spacing */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    background-image: linear-gradient(135deg, #444, #333); /* Subtle gradient effect */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    position: relative; /* For additional decorative elements if needed */
+    overflow: hidden; /* Ensure no overflow of decorative elements */
+}
+
+/* Optional: Add decorative elements like a bottom border or a small icon */
+.about-us-box::after {
+    content: "";
+    display: block;
+    width: 60px; /* Adjust width based on your design */
+    height: 4px; /* Height of the decorative line */
+    background-color: #fff; /* White color for contrast */
+    margin: 10px auto 0; /* Center the decorative line and space it from the text */
+}
+
+
+.team-heading {
+    text-align: center;
+    margin: 30px 0; /* Increase space above and below the heading */
+}
+
+.team-heading h2 {
+    font-family: 'Heebo', sans-serif; /* Use Heebo font */
+    margin: 0; /* Remove default margin */
+}
+
+.team-heading .team-label {
+    font-weight: 400; /* Regular weight for 'TEAM' */
+    font-size: 36px; /* Larger size for 'TEAM' */
+    color: #333; /* Dark color for readability */
+}
+
+.team-heading .team-title {
+    font-weight: 700; /* Bold weight for 'WOW DENTISTRY' */
+    font-size: 48px; /* Larger size for 'WOW DENTISTRY' */
+    color: #d4af37; /* Golden color for emphasis */
+    display: block; /* Ensures it appears on a new line */
+}
+
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background color for contrast */
+}
+
+
+body {
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Space between cards */
+  justify-content: space-between; /* Ensure cards fit in a row */
+}
+
+.team-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 23%; /* Width adjusted to fit four cards in a row */
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.team-card:hover {
+  background: #f9f9f9;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+  transform: translateY(-10px);
+}
+
+.team-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.team-info {
+  padding: 25px;
+}
+
+.team-name {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.team-position {
+  font-size: 1.0rem;
+  color: #666;
+}
+
+@media (max-width: 1200px) {
+  .team-card {
+    width: 48%; /* Adjust width for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    width: 100%; /* Stack cards on top of each other on smaller screens */
+    max-width: 400px;
+  }
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333; /* Set header background to dark gray */
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px; /* Reduced padding to minimize navbar height */
+    background-color: #000; /* Set navbar background to black */
+    position: relative;
+    border-bottom: 2px solid gold; /* Add a golden line below the navbar */
+    font-size: 16px;
+}
+
+.navbar-logo img {
+    height: 60px; /* Increased the height of the logo */
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    height: 60px; /* Match the height of the logo */
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 100%; /* Make links the same height as the container */
+    padding: 0 10px;
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.navbar-links li a.active {
+    color: gold; /* Change text color to gold when active */
+    border-bottom: 2px solid gold; /* Add a golden line below the active link */
+}
+
+/* Hover effects for navbar links */
+.navbar-links li a:hover {
+    color: #000; /* Change text color to black on hover */
+    background-color: #fff; /* Change background color to white on hover */
+}
+
+/* Hamburger menu */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+
+
+/* Mobile styles */
+@media only screen and (max-width: 1024px) {
+    .navbar-links {
+        display: none; /* Hide the navbar links on mobile */
+        position: absolute;
+        top: 60px; /* Position below the logo */
+        right: 20px;
+        background-color: #000; /* Background color of dropdown */
+        width: 200px; /* Adjust the width as needed */
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show the navbar links when active */
+    }
+
+    .navbar-toggle {
+        display: flex; /* Show the hamburger menu on mobile */
+    }
+}
+
+/* Mobile Navbar */
+nav.mobile-nav {
+  display: none;
+  padding: 10px;
+  background: #0c0c0c;
+}
+
+nav.mobile-nav .hamburger {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+nav.mobile-nav .mobile-menu {
+  display: none; /* Hidden by default */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.mobile-nav .mobile-menu li {
+  margin: 10px 0;
+}
+
+nav.mobile-nav .mobile-menu li a {
+  font-family: "Open Sans";
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background: #0a0a0a;
+  border-radius: 5px;
+}
+
+nav.mobile-nav .mobile-menu li a:hover {
+  background: #6a3791;
+}
+
+/* Media Query for Mobile View */
+@media screen and (max-width: 768px) {
+  nav.desktop-nav {
+    display: none;
+  }
+
+  nav.mobile-nav {
+    display: block;
+  }
+}
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+
+#scrollToTopBtn.show {
+  display: flex; /* Show button when scrolled */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333; /* Darker black on hover */
+}
+
+#whatsapp-container {
+    position: fixed;
+    bottom: 20px; /* Adjust vertical position as needed */
+    right: 20px;  /* Adjust horizontal position as needed */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above the button */
+    left: 50%;
+    margin-left: -60px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  /* Basic reset for margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the main navbar */
+.main-navbar {
+  display: flex;
+  align-items: center;
+  background-color: #333; /* Adjust as needed */
+  padding: 10px 20px;
+}
+
+.wow-logo {
+  font-family: 'Heebo', 'Arial', sans-serif; /* Use Heebo or another beautiful font */
+  font-weight: bold;
+  font-size: 36px; /* Adjusted size to make it smaller */
+  color: #ffd700; /* Initial color */
+  position: relative; /* Needed for the pseudo-element */
+  padding: 10px; /* Add padding for space around the text */
+  display: inline-block; /* Ensures padding works correctly */
+  overflow: hidden; /* Hide the animated border line */
+  background: #333; /* Background color to match the navbar and ensure visibility */
+  border-radius: 50%; /* Ensure the border follows a circular path */
+}
+
+/* Rotating dashed border */
+.wow-logo::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%; /* Increased size to move it farther away */
+  height: 140%;
+  border: 2px dashed #bdbeba; /* Dashed border with initial color */
+  border-radius: 50%; /* Make it circular */
+  transform: translate(-50%, -50%); /* Center it around the text */
+  animation: rotate-border 4s linear infinite; /* Continuous rotation */
+}
+
+/* Keyframes for rotating the dashed border around the text */
+@keyframes rotate-border {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative; /* Position relative to enable absolute positioning of dropdown content */
+}
+
+/* Dropdown Button */
+.dropbtn {
+    color: white; /* Text color for dropdown button */
+    font-size: 1em; /* Font size for dropdown button */
+    background: none; /* No background for button */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px 15px; /* Padding around button */
+    display: block; /* Ensure the padding is clickable */
+}
+
+/* Dropdown Content */
+.dropdown-contentt {
+    display: none; /* Hide dropdown content by default */
+    position: absolute; /* Position dropdown content relative to dropdown container */
+    background-color: #ADD8E6; /* Lightish blue background for dropdown content */
+    min-width: 160px; /* Minimum width of dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow for dropdown */
+    z-index: 1; /* Ensure dropdown content is above other content */
+}
+
+/* Dropdown Links */
+.dropdown-contentt a {
+    color: #333; /* Dark text color for dropdown links */
+    padding: 12px 16px; /* Padding for dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensure padding is clickable */
+}
+
+/* Dropdown Link Hover */
+.dropdown-contentt a:hover {
+    background-color: #00008B; /* Dark blue background on hover */
+    color: white; /* Text color on hover */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-contentt {
+    display: block; /* Show dropdown content when hovering over dropdown container */
+}
+
+/* Style for Dropdown Button on Hover */
+.dropdown:hover .dropbtn {
+    background-color: #003366; /* Dark blue background on hover for button */
+}
+.popup-message {
+    position: fixed;
+    bottom: 80px; /* Adjust this value as needed */
+    right: 30px; /* Move the popup a little to the left */
+    background-color: #333; /* Dark background color for better readability */
+    color: #fff; /* Light text color */
+    padding: 10px 20px 10px 20px; /* Adjust padding for more space on the left */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 3s infinite;
+    font-size: 14px; /* Adjust font size if needed */
+    font-weight: 600; /* Slightly bold text */
+    text-align: center; /* Center the text */
+}
+
+.popup-message::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position it at the bottom edge */
+    right: 10px; /* Adjust to align with the message box */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Adjust size of the triangle */
+    border-right: 10px solid transparent; /* Adjust size of the triangle */
+    border-top: 10px solid #333; /* Match the background color */
+}
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+    </style>
+</head>
+<body>
+ 
+  <nav class="main-navbar">
+    <div class="navbar-logo">
+      <span class="wow-logo">WOW</span>
+    </div>
+    <ul class="navbar-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li class="dropdown">
+          <a href="" class="dropbtn">AGENDA</a>
+          <div class="dropdown-contentt">
+            <a href="conference.html">Conference</a>
+            <a href="workshop.html">Workshop</a>
+          </div>
+        </li>
+        <li><a href="abstract.html">ABSTRACT</a></li>
+        <li><a href="awards.html">AWARDS</a></li>
+        <li><a href="register.html">REGISTER</a></li>
+        
+    </ul>
+  </nav>
+  <!-- Mobile Navbar -->
+<nav class="mobile-nav">
+    <div class="hamburger" id="hamburger">
+      &#9776; <!-- This is the hamburger icon -->
+    </div>
+    <ul class="mobile-menu" id="mobile-menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="aboutus.html">ABOUT US</a></li>
+      <li><a href="abstract.html">ABSTRACT</a></li>
+      <li><a href="awards.html">AWARDS</a></li>
+      <li><a href="register.html">REGISTER</a></li>
+    </ul>
+  </nav>
+  
+  
+ 
+    <div class="container">
+        <img src="16.png" alt="Logo 1" class="logo">
+        <div class="text-container">
+            <p>
+                WOW <b>CONGRESS</b> is an arch where feminist energy is honored and promotes talent by acknowledging their contribution across professions and beyond. It desires to bring people from across the globe to discuss how <b>to empower, reshape, and advance women</b> with the proposition through our exclusive events for professionals, including medical and healthcare, Information Technology, Arts, Business Management, etc.
+            </p>
+        </div>
+        <img src="17.png" alt="Logo 2" class="logo">
+    </div>
+    <div class="team-heading">
+        <h2><span class="team-label">TEAM</span><br><span class="team-title">WOW DENTISTRY</span></h2>
+    </div>
+    <div class="team-container">
+        <div class="team-card">
+          <img src="team 1.jpg" alt="Team Member 1" class="team-image">
+          <div class="team-info">
+            <h3 class="team-name">Prof. Dr. Raquel Zita</h3>
+            <p class="team-position">CHAIRWOMAN, WOW DENTISTRY 2024</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="team 2.jpg" alt="Team Member 2" class="team-image">
+          <div class="team-info">
+            <h3 class="team-name">Dr. Raşa Imranoğlu</h3>
+            <p class="team-position">CHEIF EXECUTIVE, WOW DENTISTRY 2024</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="team 3.jpg" alt="Team Member 3" class="team-image">
+          <div class="team-info">
+            <h3 class="team-name">Dr. Mudher Ali</h3>
+            <p class="team-position">DIRECTOR, WOW DENTISTRY 2024</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="team 4.jpeg" alt="Team Member 4" class="team-image">
+          <div class="team-info">
+            <h3 class="team-name">Abeer TM</h3>
+            <p class="team-position">SALES & BUSINESS DEVELOPMENT, WOW DENTISTRY 2024</p>
+          </div>
+        </div>
+      </div>
+      <button id="scrollToTopBtn" onclick="scrollToTop()">&uArr;</button>
+      <div id="whatsapp-container">
+        <div id="whatsapp-button" class="tooltip">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" style="width: 50px; height: 50px; cursor: pointer;">
+          <div class="popup-message">
+            <span>Need help?</span>
+            <span>Click me</span>
+        </div>
+          <div id="whatsapp-message" style="display: none;">Hi *Wow congress*! I need more info about Wow congress https://wowcongress.com</div>
+        </div>
+      </div>
+      
+      <script  src="./script.js"></script>
+      <script>
+        // Function to handle scroll behavior
+        function scrollToTop() {
+            // Scroll to the top of the document with smooth behavior
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Event listener to show/hide scroll-to-top button based on scroll position
+        window.addEventListener('scroll', function() {
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        
+            // Show button after scrolling down 300px
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+        
+        
+        </script>
+     
+        
+        <script>
+          // Function to open WhatsApp chat with specified message
+        function openWhatsAppChat() {
+          // Replace '1234567890' with your WhatsApp number
+          var phoneNumber = '+971547086278';
+          
+          // Get the message from the hidden div
+          var message = document.getElementById('whatsapp-message').innerText;
+          
+          // Encode the message for use in URL
+          var encodedMessage = encodeURIComponent(message);
+        
+          // Construct the WhatsApp URL with phone number and message
+          var whatsappURL = 'https://wa.me/' + 971547086278 + '/?text=' + encodedMessage;
+        
+          // Open the WhatsApp chat window in a new tab
+          window.open(whatsappURL, '_blank');
+        }
+        
+        // Event listener to open WhatsApp chat when button is clicked
+        document.getElementById('whatsapp-button').addEventListener('click', function() {
+          // Open WhatsApp chat with specified message
+          openWhatsAppChat();
+          
+          // Hide the tooltip after button click
+          var tooltip = document.querySelector('.tooltip .tooltiptext');
+          if (tooltip) {
+            tooltip.style.visibility = 'hidden';
+            tooltip.style.opacity = 0;
+          }
+        });
+        
+        </script>
+        
+        
+        
+        
+        
+          
+        <!-- <div class="visme_d" data-title="Untitled Project" data-url="1jm8g8qw-untitled-project?sidebar=true" data-domain="forms" data-full-page="false" data-min-height="600px" data-form-id="49875"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script> -->
+        <!-- scripts -->
+        
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+        <script  src="./script.js"></script>
+          <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+           <script>
+         document.addEventListener('DOMContentLoaded', function () {
+          var swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            speed: 600, // Slide transition speed in milliseconds
+            autoplay: {
+              delay: 1000, // Autoplay delay in milliseconds
+            },
+            effect: 'coverflow', // Use the coverflow effect
+            coverflowEffect: {
+              rotate: 50, // Set rotation angle
+              stretch: 0, // Set stretch amount
+              depth: 100, // Set depth
+              modifier: 1, // Set scaling modifier
+              slideShadows: false, // Disable slide shadows
+            },
+            slidesPerView: 'auto', // Show as many slides as possible
+            centeredSlides: true, // Center the active slide
+            spaceBetween: 10,
+            // Add custom pagination if needed
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            on: {
+              slideChange: function () {
+                // Remove border from all slides
+                var slides = this.slides;
+                for (var i = 0; i < slides.length; i++) {
+                  slides[i].style.border = 'none';
+                }
+        
+                // Add thicker border to the center slide with pink color
+                var activeSlideIndex = this.activeIndex % slides.length;
+                slides[activeSlideIndex].style.border = '2px solid gold';
+              },
+            },
+          });
+        });
+        
+        // ye slider ke js hai uppar
+        // cards rakho effect jab things to do at wow ka banare slider best
+        
+           </script>
+         
+         <script>
+          // Get the section element
+          var section = document.getElementById("section");
+        
+          // Set the inline style for the top border
+          section.style.borderTop = "5px solid rgb(255, 215, 0)";
+          section.style.borderRight = "none";
+          section.style.borderBottom = "none";
+          section.style.borderLeft = "none";
+        </script>
+        <!-- ye uppar vali border top landing page radius ki hai -->
+        <script src="script.js"></script>
+        <script>
+          
+        // JavaScript function to toggle responsive navigation
+        function toggleNavbar() {
+            var x = document.getElementById("myTopnav");
+            if (x.className.indexOf("responsive") === -1) {
+                x.className += " responsive";
+            } else {
+                x.className = x.className.replace(" responsive", "");
+            }
+        }
+        
+        </script>
+        <script>
+          document.getElementById('hamburger').addEventListener('click', function() {
+          var menu = document.getElementById('mobile-menu');
+          if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+          } else {
+            menu.style.display = 'block';
+          }
+        });
+        
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarLinks = document.getElementById('navbar-links');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Toggle navbar links on hamburger menu click
+    navbarToggle.addEventListener('click', function () {
+        navbarLinks.classList.toggle('active');
+    });
+
+    // Highlight the current section on click
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+
+        </script>
+</body>
+</html>

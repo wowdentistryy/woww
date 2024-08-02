@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333; /* Set header background to dark gray */
+}
+
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px; /* Reduced padding to minimize navbar height */
+  background-color: #000; /* Set navbar background to black */
+}
+
+.navbar-logo img {
+  height: 60px; /* Increased the height of the logo */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  height: 60px; /* Match the height of the logo */
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  height: 100%; /* Make links the same height as the container */
+  padding: 0 10px;
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effects for navbar links */
+.navbar-links li a:hover {
+  color: #000; /* Change text color to black on hover */
+  background-color: #ffffff; /* Change background color to white on hover */
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-navbar {
+      display: none; /* Hide the navbar on screens smaller than laptops */
+  }
+}
+
+
+/* Mobile Navbar */
+nav.mobile-nav {
+  display: none;
+  padding: 10px;
+  background: #0c0c0c;
+}
+
+nav.mobile-nav .hamburger {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+nav.mobile-nav .mobile-menu {
+  display: none; /* Hidden by default */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.mobile-nav .mobile-menu li {
+  margin: 10px 0;
+}
+
+nav.mobile-nav .mobile-menu li a {
+  font-family: "Open Sans";
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background: #0a0a0a;
+  border-radius: 5px;
+}
+
+nav.mobile-nav .mobile-menu li a:hover {
+  background: #6a3791;
+}
+
+/* Media Query for Mobile View */
+@media screen and (max-width: 768px) {
+  nav.desktop-nav {
+    display: none;
+  }
+
+  nav.mobile-nav {
+    display: block;
+  }
+}
+
+
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.offer-heading {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    color: #333;
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    white-space: nowrap; /* Prevent text from wrapping */
+    border: 2px solid transparent; /* Hide default border */
+}
+
+.offer-heading::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #ffeb3b;
+    z-index: -1;
+}
+
+.offer-heading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent; /* Hide default border */
+    border-top: 2px solid #ffeb3b; /* Continuous line along top */
+    border-bottom: 2px solid #ffeb3b; /* Continuous line along bottom */
+    border-left: 2px solid #ffeb3b; /* Continuous line along left */
+    border-right: 2px solid #ffeb3b; /* Continuous line along right */
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+@media (max-width: 600px) {
+    .offer-heading {
+        font-size: 18px; /* Further reduce font size for smaller screens */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wow-heading {
+    font-size: 48px; /* Adjust font size */
+    font-weight: 900; /* Use bold font weight */
+    font-family: 'Inter', Arial, sans-serif; /* Use Inter font */
+    color: #ffff;
+}
+header#shbb {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 50px 0; /* Add padding to create space around headings */
+    background-image: url('yt.jpeg'); /* Specify path to header background image */
+    background-size: cover; /* Ensure background image covers the entire header */
+    color: #fff; /* Text color for headings (white in this example) */
+}
+.content {
+    text-align: center;
+}
+
+.final-call-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c26fc5;
+    margin-top: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.highlight-date {
+    background-color: #d51ddb;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block; /* Ensure date remains inline */
+}
+
+/* Media query for mobile view */
+@media (max-width: 600px) {
+    .highlight-date {
+        display: block; /* Display date on a new line in mobile view */
+        margin-top: 10px; /* Add margin for spacing between lines */
+    }
+}
+.line-below {
+    border: none;
+    border-top: 2px solid #0c0c0c; /* Blue color for the line below */
+    width: 50%; /* Adjust line width as needed */
+    margin: 20px auto; /* Center the line and provide spacing */
+}
+.wow-city-heading {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* Use gradient for the text color */
+    color: transparent; /* Make text color transparent initially */
+    background-color: #d51ddb; /* Solid background color for the heading */
+    /* Define a linear gradient for the text color */
+    background-image: linear-gradient(to right, #007bff, #8a2be2, #ff0000, #ff7f00, #2e8b57);
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    background-clip: text;
+}
+
+.container3 {
+            max-width: 800px;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .box-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+            height: 200px; /* Set a fixed height for all boxes */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            background-image: url('frr.avif');
+        }
+        .box-content {
+            flex-grow: 1; /* Allow content to grow within box */
+        }
+        .price {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #d51ddb;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Media Query for Responsive Design */
+        @media (max-width: 600px) {
+            .box {
+                width: 100%; /* Full width on smaller screens */
+            }
+        }
+        .note-section {
+          width: 98%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff; /* Lighter background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+    font-family: 'Inter', Arial, sans-serif; /* Use Inter font */
+    font-weight: 550;
+}
+
+.note-section:hover {
+    transform: translateY(-3px); /* Lift on hover */
+}
+
+/* Borders */
+.note-section {
+    border: 4px solid #295b9c; /* Lighter border color */
+}
+
+/* Typography */
+.note-section {
+    font-family: Arial, sans-serif;
+    color: #333333; /* Dark text color */
+    line-height: 1.6;
+    
+}
+
+/* Laptop view adjustment */
+@media (min-width: 1024px) {
+    .note-section {
+        width: 98%; /* Set width to 98% for laptops */
+        max-width: none; /* Ensure it expands to 98% without max-width limitation */
+    }
+}
+
+
+
+.note-section a.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+ /* Define a keyframe animation for continuous glowing effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Initial shadow */
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Medium shadow */
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Back to initial shadow */
+    }
+}
+
+/* Apply the animation to H5 elements */
+H5 {
+    font-weight: 800;
+    color: black;
+    animation: glow 1.5s ease-in-out infinite; /* Apply animation continuously */
+    font-size: 20px;
+}
+
+
+.registration-box {
+    width: 70%;
+    margin: 20px auto; /* Adjusted margin */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    border: 2px solid rgb(103, 202, 116);
+}
+
+.registration-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: normal;
+    font-size: 18px;
+    color: #022c47;
+    font-weight: 800;
+}
+
+.registration-description {
+    display: none;
+    margin-top: 15px;
+}
+
+.registration-description p {
+    margin-bottom: 10px;
+    color: #666;
+    font-family:'Heebo', Times, serif;
+}
+
+.registration-description ul {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    color: #666;
+}
+
+.arrow {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+/* Adjusted margin between registration boxes */
+.registration-box + .registration-box {
+    margin-top: 10px;
+}
+/* Footer Container */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: #333;
+  color: #fff;
+  background-color: #150333;
+  font-size: 16px;
+  margin-top: 20px;
+  border: 2px solid #000; /* Add a black solid border */
+  border-radius: 10px; /* Apply a border radius of 10px */
+}
+.rainbow-heading {
+  display: inline-block; /* Ensure the heading behaves as an inline block */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: visible; /* Allow text to overflow the container */
+}
+
+/* Individual Columns */
+.column {
+  width: 250px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.column h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.column p {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.column p i {
+  margin-right: 5px;
+}
+
+.column p span {
+  font-weight: bold;
+}
+
+.column a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Rainbow Heading */
+.rainbow-heading {
+  background: linear-gradient(to right, #963d36, #b2685e, #c7977e, #a9d5b1, #7bbf8c, #5c93ab, #7b6cbf);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Centered Icons */
+.centered-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.centered-icons a {
+  margin-right: 20px;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Organizers */
+.organizers {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.organizer-column {
+  margin-right: 10px;
+}
+
+.organizer-column img {
+  max-width: 80px;
+  height: auto;
+}
+
+/* Year Line */
+.year-line {
+  background-color: #222;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+/* Styling for WOW Congress Secretariat paragraph */
+#congress-info {
+  color: #fff; /* White color */
+  margin-bottom: 0; /* Removed bottom margin for the secretariat info */
+  line-height: 1.6; /* Improved line spacing for the secretariat info */
+  font-size: 16px; /* Adjusted font size for the secretariat info */
+}
+/* Style for email-info paragraph */
+.email-info {
+  font-size: 16px; /* Set font size for the text */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center align items vertically */
+  margin-top: 10px; /* Add top margin between email-info paragraphs */
+}
+
+/* Style for envelope icon */
+.email-info i.fa-envelope {
+  margin-right: 8px; /* Space between icon and text */
+  color: white; /* Set icon color to white */
+}
+
+/* Style for email address link */
+.email-info a {
+  color: white; /* Set link text color to white */
+  text-decoration: none; /* Remove underline from link */
+}
+
+/* Hover effect for email address link */
+.email-info a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+/* Style for location-info paragraph */
+.location-info {
+  font-size: 16px; /* Set font size for the text */
+  margin-bottom: 20px; 
+  margin-top: 20px;/* Add bottom margin for spacing between paragraphs */
+}
+
+/* Style for map marker icon */
+.location-info i.fas.fa-map-marker-alt {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Style for country name */
+.location-info span {
+  font-weight: bold; /* Set font weight for country name */
+}
+.wow-logo {
+  font-family: 'Heebo', 'Arial', sans-serif; /* Use Heebo or another beautiful font */
+  font-weight: bold;
+  font-size: 36px; /* Adjusted size to make it smaller */
+  color: #ffd700; /* Initial color */
+  position: relative; /* Needed for the pseudo-element */
+  padding: 10px; /* Add padding for space around the text */
+  display: inline-block; /* Ensures padding works correctly */
+  overflow: hidden; /* Hide the animated border line */
+  background: #333; /* Background color to match the navbar and ensure visibility */
+  border-radius: 50%; /* Ensure the border follows a circular path */
+}
+
+/* Rotating dashed border */
+.wow-logo::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%; /* Increased size to move it farther away */
+  height: 140%;
+  border: 2px dashed #bdbeba; /* Dashed border with initial color */
+  border-radius: 50%; /* Make it circular */
+  transform: translate(-50%, -50%); /* Center it around the text */
+  animation: rotate-border 4s linear infinite; /* Continuous rotation */
+}
+
+/* Keyframes for rotating the dashed border around the text */
+@keyframes rotate-border {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Dropdown styles */
+.dropdown-contentt {
+  display: none;
+  position: absolute;
+  background-color: rgba(52, 201, 168, 0.9); 
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(223, 22, 22, 0.2);
+  z-index: 1;
+}
+
+.dropdown-contentt a {
+  color: #46c9c2;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-contentt a:hover {
+  background-color: rgba(182, 28, 28, 0.3);
+}
+
+.dropdown:hover .dropdown-contentt {
+  display: block;
+}
+
+
+
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px; /* Reduced padding to minimize navbar height */
+  background-color: #000; /* Set navbar background to black */
+}
+
+.navbar-logo img {
+  height: 60px; /* Increased the height of the logo */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  height: 60px; /* Match the height of the logo */
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  height: 100%; /* Make links the same height as the container */
+  padding: 0 10px;
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effects for navbar links */
+.navbar-links li a:hover {
+  color: #000; /* Change text color to black on hover */
+  background-color: #ffffff; /* Change background color to white on hover */
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-navbar {
+      display: none; /* Hide the navbar on screens smaller than laptops */
+  }
+}
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensures the button is above other elements */
+}
+
+#whatsapp-button img {
+  border-radius: 50%; /* Optional: makes the image round */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+
+#scrollToTopBtn.show {
+  display: flex; /* Show button when scrolled */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333; /* Darker black on hover */
+}
+.popup-message {
+    position: fixed;
+    bottom: 80px; /* Adjust this value as needed */
+    right: 30px; /* Move the popup a little to the left */
+    background-color: #333; /* Dark background color for better readability */
+    color: #fff; /* Light text color */
+    padding: 10px 20px 10px 20px; /* Adjust padding for more space on the left */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 3s infinite;
+    font-size: 14px; /* Adjust font size if needed */
+    font-weight: 600; /* Slightly bold text */
+    text-align: center; /* Center the text */
+}
+
+.popup-message::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position it at the bottom edge */
+    right: 10px; /* Adjust to align with the message box */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Adjust size of the triangle */
+    border-right: 10px solid transparent; /* Adjust size of the triangle */
+    border-top: 10px solid #333; /* Match the background color */
+}
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+
+    </style>
+</head>
+<body>
+  <nav class="main-navbar">
+    <div class="navbar-logo">
+      <span class="wow-logo">WOW</span>
+    </div>
+    <ul class="navbar-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li class="dropdown">
+          <a href="" class="dropbtn">AGENDA</a>
+          <div class="dropdown-contentt">
+            <a href="conference.html">Conference</a>
+            <a href="workshop.html">Workshop</a>
+          </div>
+        </li>
+        <li><a href="abstract.html">ABSTRACT</a></li>
+        <li><a href="awards.html">AWARDS</a></li>
+        <li><a href="register.html">REGISTER</a></li>
+        
+    </ul>
+  </nav>
+      
+      <!-- Mobile Navbar -->
+      <nav class="mobile-nav">
+        <div class="hamburger" id="hamburger">
+          &#9776; <!-- This is the hamburger icon -->
+        </div>
+        <ul class="mobile-menu" id="mobile-menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+          <li><a href="abstract.html">ABSTRACT</a></li>
+          <li><a href="awards.html">AWARDS</a></li>
+          <li><a href="register.html">REGISTER</a></li>
+        </ul>
+      </nav>
+      <!-- end of navbar -->
+    </header>
+    <header id="shbb">
+        <h1 class="offer-heading">Save Maximum On Registrations</h1>
+    
+        <h1 class="wow-heading">WOW DENTISTRY 2024</h1>
+    </header>
+
+
+    <hr class="line-below">
+    
+    <div class="content">
+        <h2 class="final-call-heading">EARLY BIRD CLOSING ON <span class="highlight-date">25-AUGUST-2024</span></h2>
+    </div>
+    <h3 class="wow-city-heading">WOW DENTISTRY-DUBAI</h3>
+    <div class="container3">
+        <div class="box-container">
+            <div class="box">
+                <h2>PROFESSIONALS</h2>
+                <div class="price">	&dollar; USD 249</div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+            <div class="box">
+                <h2>STUDENTS</h2>
+                <div class="price">	&dollar; USD 129</div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <h2>VIRTUAL</h2>
+            <div class="price">	&dollar; USD 89</div>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+    </div>
+    <hr class="line-below">
+    <div class="container">
+        <div class="note-section">
+            <h5>NOTE:</h5>
+            
+            <p><strong> &#8226;All passes include:</strong> Entry to the WOW DENTISTRY Program.</p>
+            
+            <h3> &#8226;CONGRESS Pass</h3>
+            <p>The People who want to participate in WOW DENTISTRY program only, (not applicable for workshop or awards).</p>
+            
+            <h3> &#8226;Student Pass</h3>
+            <p>This is the special concessional fee for undergraduate, graduate, and post-graduate students. To be able to register as a student must present proof of full-time enrolment at a recognized university or college for both, the time of registration and during the congress.</p>
+        </div>
+    </div>
+    <div class="registration-box" id="registrationBox">
+        <div class="registration-header" onclick="toggleDescription()">
+            <span class="header-text">What you will get in Registration?</span>
+            <span class="arrow">&#9660;</span> <!-- Dropdown arrow icon -->
+        </div>
+        <div class="registration-description" id="registrationDescription">
+            <p><strong>KEYNOTE & PLENARY SESSIONS:</strong> Get in-person access to the latest in DENTISTRY & ORAL HEALTH from our hand-selected experts.</p>
+            <p><strong>BREAKOUT SESSIONS:</strong> Access to all breakout sessions across 10 different tracks, exhibition, poster sessions, and round table discussions.</p>
+            <p><strong>COMMUNICATION SESSION:</strong> Morning/afternoon tea, coffee, snacks, and lunches for all days of the Conference.</p>
+            <p><strong>CERTIFICATION:</strong> Get certificate of presentation/attendance.</p>
+            <p><strong>NETWORKING:</strong> Opportunity to connect with Influencers, Academicians, Business owners, sponsors, close deals, and experience the WOW moment.</p>
+        </div>
+    </div>
+    <div class="registration-box" id="cancellationPolicyBox">
+        <div class="registration-header" onclick="toggleCancellationPolicy()">
+            <span class="header-text">Registration Cancellation Policy</span>
+            <span class="arrow">&#9660;</span> <!-- Dropdown arrow icon -->
+        </div>
+        <div class="registration-description" id="cancellationPolicyDescription">
+            <p><strong>Registration fee is transferable (within the same registration category) until 15 days of the conference start date.</strong> Registration cancellations must be submitted in writing by email.</p>
+            <p><strong>Note:</strong> Refunds will be processed based on the date of cancellation, only after the congress.</p>
+            <p><strong>Important Notice:</strong> The Health and Safety of our Speakers and Attendees is of paramount significance. The WOW congress team is committed to providing a safe environment for business and networking activities, in strict accordance with the guidelines set out by the local authorities. Congress will be delivered in compliance with COVID-19 regulations and stringent social distancing guidelines as advised by the local Government.</p>
+        </div>
+    </div>
+    <div class="registration-box" id="posterGuidelinesBox">
+        <div class="registration-header" onclick="togglePosterGuidelines()">
+            <span class="header-text">Poster Guidelines</span>
+            <span class="arrow">&#9660;</span> <!-- Dropdown arrow icon -->
+        </div>
+        <div class="registration-description" id="posterGuidelinesDescription">
+            <p><strong>Use fonts such as Arial/Times New Roman</strong> in a reasonable font size that should be easy to read. The spacing between the lines should also be taken into consideration. A very simple format should be used to represent all the details of the research carried out by the author. Long narrated paragraphs should be avoided. Short phrases and bulleted points should be used in the poster to present the main highlights of the work done.</p>
+            <p><strong>The Poster should include the following:</strong></p>
+            <ul>
+                <li><strong>Overview:</strong> A summary of the purpose, methods, and results should be mentioned on either of the upper sections of the board.</li>
+                <li><strong>Introduction:</strong> An idea about the objective and background of the work should be mentioned.</li>
+                <li><strong>Methods:</strong> Simple description of the apparatus, chemistry, samples, materials, etc., used in the research is to be mentioned in the poster.</li>
+                <li><strong>Results:</strong> Graphs, spectra, charts, pictures, etc., with a minimum of text to illustrate the nature of the results.</li>
+                <li><strong>Conclusions:</strong> The positive and negative aspects of the work carried out are to be displayed along with the obtained results. Future research prospects and developing aspects of the related research can also be discussed.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="registration-box" id="faqBox">
+        <div class="registration-header" onclick="toggleFAQ()">
+            <span class="header-text">Frequently Asked Questions</span>
+            <span class="arrow">&#9660;</span> <!-- Dropdown arrow icon -->
+        </div>
+        <div class="registration-description" id="faqDescription">
+            <p><strong>How do I access the virtual meeting?</strong></p>
+            <p>The Virtual Meeting link will be mailed to you one week before the conference dates. You will get meeting link updates on your WhatsApp/Social Media inbox.</p>
+            
+            <p><strong>How can I make sure that my abstract has been accepted, or not?</strong></p>
+            <p>You will receive an email confirmation of approval within 24-48 hours of submitting your abstract proposal.</p>
+            
+            <p><strong>Shall I get any payment receipt or invoice after registration?</strong></p>
+            <p>Yes, you will get the payment acknowledgement from the conference organizers through email within 24-48 hours after the registration.</p>
+            
+            <p><strong>Do I get a refund if my abstract is rejected?</strong></p>
+            <p>Yes, you will get 100% refund in case of abstract rejection.</p>
+            
+            <p><strong>How much time will I get for an oral presentation?</strong></p>
+            <p>Around 20-25 minutes including Q/A.</p>
+            
+            <p><strong>In which language should I speak during presentation?</strong></p>
+            <p>English.</p>
+            
+            <p><strong>Will I get a translator during the presentation?</strong></p>
+            <p>Translation service will not be provided. If you wish you can bring a translator by yourself.</p>
+            
+            <p><strong>Is there a prescribed format/sample template available for abstract submission?</strong></p>
+            <p>Yes, we have created an abstract submission template that can be downloaded from the corresponding conference abstract submission page.</p>
+            
+            <p><strong>Is it allowed to submit multiple proposals?</strong></p>
+            <p>Yes, you may submit a maximum of two proposals.</p>
+            
+            <p><strong>Will I get any certificate after the completion of the conference?</strong></p>
+            <p>Yes, you will be felicitated with a certificate of recognition soon after the conference.</p>
+            
+            <p><strong>Do our abstracts will be published?</strong></p>
+            <p>Yes, The Abstracts will be published in WOW Congress Magazine.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="column">
+          <h1 class="rainbow-heading">QUICK LINKS</h1>
+          <a href="index.html#team">TEAM</a>
+          <a href="awards.html">AWARDS</a>
+          <a href="register.html">REGISTER</a>
+          <a href="index.html#exhibit">EXHIBIT</a>
+      </div>
+      
+      
+        <div class="column">
+            <h1 class="rainbow-heading">WOW CONGRESS SECRETARIAT</h1>
+            <p id="congress-info" class="location-info">
+              <i class="fas fa-map-marker-alt"></i> 73 Oakfield Road East Ham, E6 1LN, London<br>
+              <span>UNITED KINGDOM</span>
+          </p>
+          
+          <p id="congress-info" class="location-info">
+              <i class="fas fa-map-marker-alt"></i> SHEIKHA NOORA TOWER, BARSHA HEIGHTS OFFICE #510, PO BOX 65621, Dubai, UAE
+          </p>
+          
+           <!-- Email addresses with envelope icons -->
+      <p class="email-info">
+        <i class="fa fa-envelope"></i> <a href="mailto:dentistry@wowcongress.com">dentistry@wowcongress.com</a>
+      </p>
+      
+      <p class="email-info">
+        <i class="fa fa-envelope"></i> <a href="mailto:aesthetics@wowcongress.com">aesthetics@wowcongress.com</a>
+      </p>
+      
+            <p id="congress-info">
+              <i class="fa fa-whatsapp"></i> +971 547086278
+            </p>
+        </div>
+      
+        <div class="column">
+            <h1 class="rainbow-heading">JOIN OUR COMMUNITY</h1>
+            <div class="social-icons centered-icons">
+                <a href="https://www.facebook.com/groups/1097918827444826" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/showcase/82836961/admin/feed/posts/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p id="congress-info">#wowdentistry #wowcongress</p>
+        </div>
+      
+        <div class="column">
+            <h1 class="rainbow-heading">ORGANIZERS</h1>
+            <div class="organizers">
+                <div class="organizer-column">
+                    <img src="16.png" alt="Organizer 1">
+                </div>
+                <div class="organizer-column">
+                    <img src="17.png" alt="Organizer 2">
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      <div class="year-line">
+        <p id="congress-info">© Copyright 2024 All rights reserved</p>
+      </div>
+      <button id="scrollToTopBtn" onclick="scrollToTop()">&uArr;</button>
+  <!-- WhatsApp Integration Button with Tooltip -->
+<div id="whatsapp-button" class="tooltip">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" style="width: 50px; height: 50px; cursor: pointer;">
+  <div class="popup-message">
+    <span>Need help?</span>
+    <span>Click me</span>
+</div>
+  <div id="whatsapp-message" style="display: none;">Hi *Wow congress*! I need more info about Wow congress https://wowcongress.com</div>
+</div>
+<script>
+  // Function to handle scroll behavior
+  function scrollToTop() {
+      // Scroll to the top of the document with smooth behavior
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  }
+  
+  // Event listener to show/hide scroll-to-top button based on scroll position
+  window.addEventListener('scroll', function() {
+      var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  
+      // Show button after scrolling down 300px
+      if (window.scrollY > 300) {
+          scrollToTopBtn.style.display = "block";
+      } else {
+          scrollToTopBtn.style.display = "none";
+      }
+  });
+  
+  
+  </script>
+  
+<script>
+  // Function to open WhatsApp chat with specified message
+function openWhatsAppChat() {
+  // Replace '1234567890' with your WhatsApp number
+  var phoneNumber = '+971 55 909 8802';
+  
+  // Get the message from the hidden div
+  var message = document.getElementById('whatsapp-message').innerText;
+  
+  // Encode the message for use in URL
+  var encodedMessage = encodeURIComponent(message);
+
+  // Construct the WhatsApp URL with phone number and message
+  var whatsappURL = 'https://wa.me/' + 971559098802 + '/?text=' + encodedMessage;
+
+  // Open the WhatsApp chat window in a new tab
+  window.open(whatsappURL, '_blank');
+}
+
+// Event listener to open WhatsApp chat when button is clicked
+document.getElementById('whatsapp-button').addEventListener('click', function() {
+  // Open WhatsApp chat with specified message
+  openWhatsAppChat();
+  
+  // Hide the tooltip after button click
+  var tooltip = document.querySelector('.tooltip .tooltiptext');
+  if (tooltip) {
+    tooltip.style.visibility = 'hidden';
+    tooltip.style.opacity = 0;
+  }
+});
+
+</script>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    <script src="scripts.js"></script>
+ <script>
+// Function to handle scroll navigation
+function scrollContainer(direction) {
+    const container = document.querySelector('.scroll-container');
+    const containerWidth = container.clientWidth;
+    const scrollAmount = containerWidth; // Scroll by one container width
+
+    let scrollPosition = container.scrollLeft;
+
+    if (direction === 'prev') {
+        scrollPosition -= scrollAmount;
+    } else if (direction === 'next') {
+        scrollPosition += scrollAmount;
+    }
+
+    // Calculate the nearest scroll snap point based on container width
+    scrollPosition = Math.round(scrollPosition / containerWidth) * containerWidth;
+
+    // Ensure scroll position stays within valid bounds
+    scrollPosition = Math.max(0, Math.min(scrollPosition, container.scrollWidth - containerWidth));
+
+    // Smooth scroll animation using scrollTo and scrollLeft
+    container.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+    });
+}
+
+
+
+
+
+ </script>
+    <script src="script.js"></script>
+
+    <script src="script.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+        
+        <script>
+    function toggleDescription() {
+    const description = document.getElementById('registrationDescription');
+    const arrow = document.querySelector('#registrationBox .arrow');
+
+    if (description.style.display === 'none' || description.style.display === '') {
+        description.style.display = 'block';
+        arrow.classList.add('rotated'); // Rotate arrow when description is visible
+    } else {
+        description.style.display = 'none';
+        arrow.classList.remove('rotated'); // Remove rotation when description is hidden
+    }
+}
+
+function toggleCancellationPolicy() {
+    const description = document.getElementById('cancellationPolicyDescription');
+    const arrow = document.querySelector('#cancellationPolicyBox .arrow');
+
+    if (description.style.display === 'none' || description.style.display === '') {
+        description.style.display = 'block';
+        arrow.classList.add('rotated'); // Rotate arrow when description is visible
+    } else {
+        description.style.display = 'none';
+        arrow.classList.remove('rotated'); // Remove rotation when description is hidden
+    }
+}
+
+function togglePosterGuidelines() {
+    const description = document.getElementById('posterGuidelinesDescription');
+    const arrow = document.querySelector('#posterGuidelinesBox .arrow');
+
+    if (description.style.display === 'none' || description.style.display === '') {
+        description.style.display = 'block';
+        arrow.classList.add('rotated'); // Rotate arrow when description is visible
+    } else {
+        description.style.display = 'none';
+        arrow.classList.remove('rotated'); // Remove rotation when description is hidden
+    }
+}
+
+function toggleFAQ() {
+    const description = document.getElementById('faqDescription');
+    const arrow = document.querySelector('#faqBox .arrow');
+
+    if (description.style.display === 'none' || description.style.display === '') {
+        description.style.display = 'block';
+        arrow.classList.add('rotated'); // Rotate arrow when description is visible
+    } else {
+        description.style.display = 'none';
+        arrow.classList.remove('rotated'); // Remove rotation when description is hidden
+    }
+}
+
+
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              const bookNowBtn = document.getElementById('bookNowBtn');
+              const verificationForm = document.getElementById('verificationForm');
+              const proceedBtn = document.getElementById('proceedBtn');
+            
+              bookNowBtn.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                verificationForm.style.display = 'block'; // Show the verification form
+              });
+            
+              proceedBtn.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default button behavior
+            
+                // Optional: Perform form validation here
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+            
+                if (name.trim() === '' || email.trim() === '') {
+                  alert('Name and Email are required!');
+                  return;
+                }
+            
+                // Proceed with payment logic here (e.g., redirect to payment page)
+                alert('Proceeding to payment...');
+                // window.location.href = 'payment.html'; // Redirect to payment page
+              });
+            });
+            </script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+            <script  src="./script.js"></script>
+              <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+                </script>
+               <script>
+             document.addEventListener('DOMContentLoaded', function () {
+              var swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+                speed: 600, // Slide transition speed in milliseconds
+                autoplay: {
+                  delay: 1000, // Autoplay delay in milliseconds
+                },
+                effect: 'coverflow', // Use the coverflow effect
+                coverflowEffect: {
+                  rotate: 50, // Set rotation angle
+                  stretch: 0, // Set stretch amount
+                  depth: 100, // Set depth
+                  modifier: 1, // Set scaling modifier
+                  slideShadows: false, // Disable slide shadows
+                },
+                slidesPerView: 'auto', // Show as many slides as possible
+                centeredSlides: true, // Center the active slide
+                spaceBetween: 10,
+                // Add custom pagination if needed
+                pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+                },
+                on: {
+                  slideChange: function () {
+                    // Remove border from all slides
+                    var slides = this.slides;
+                    for (var i = 0; i < slides.length; i++) {
+                      slides[i].style.border = 'none';
+                    }
+            
+                    // Add thicker border to the center slide with pink color
+                    var activeSlideIndex = this.activeIndex % slides.length;
+                    slides[activeSlideIndex].style.border = '2px solid gold';
+                  },
+                },
+              });
+            });
+            
+            // ye slider ke js hai uppar
+            // cards rakho effect jab things to do at wow ka banare slider best
+            
+               </script>
+             
+             <script>
+              // Get the section element
+              var section = document.getElementById("section");
+            
+              // Set the inline style for the top border
+              section.style.borderTop = "5px solid rgb(255, 215, 0)";
+              section.style.borderRight = "none";
+              section.style.borderBottom = "none";
+              section.style.borderLeft = "none";
+            </script>
+            <!-- ye uppar vali border top landing page radius ki hai -->
+            <script src="script.js"></script>
+            <script>
+              
+            // JavaScript function to toggle responsive navigation
+            function toggleNavbar() {
+                var x = document.getElementById("myTopnav");
+                if (x.className.indexOf("responsive") === -1) {
+                    x.className += " responsive";
+                } else {
+                    x.className = x.className.replace(" responsive", "");
+                }
+            }
+            
+            </script>
+            <script>
+              document.getElementById('hamburger').addEventListener('click', function() {
+              var menu = document.getElementById('mobile-menu');
+              if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+              } else {
+                menu.style.display = 'block';
+              }
+            });
+            
+            </script>
+</body>
+</html>

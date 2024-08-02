@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+     /* Reset default margin and padding for body */
+     body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif; /* Use Inter font for the entire page */
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #ffffff;
+        text-align: center; /* Center align text content */
+    }
+
+    /* Styling for the header */
+    header {
+        margin-top: 20px;
+    }
+
+    /* Styling for the main heading (SUBMIT ABSTRACT) */
+    h1 {
+        font-size: 36px; /* Increased font size for SUBMIT ABSTRACT */
+        font-weight: 900; /* Inter Black */
+        color: #000000; /* Black color */
+        margin-bottom: 10px; /* Reduce spacing below the heading */
+    }
+
+    /* Styling for the subheading (@WOW DENTISTRY) */
+    h2 {
+        font-size: 48px; /* Increased font size for @WOW DENTISTRY */
+        font-weight: 900; /* Inter Black */
+        color: #ff1493; /* Pink color */
+        margin-bottom: 5px; /* Reduce spacing below @WOW DENTISTRY */
+    }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-box, .right-box {
+    width: 48%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.left-box h3, .right-box h3 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.5em;
+    color: #333333;
+    border-bottom: 2px solid #FFD700; /* Gold underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.left-box p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.left-box ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.left-box ul li {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+.right-box h3 {
+    font-size: 1.8em; /* Increased font size */
+    line-height: 1.4; /* Slightly reduced line height */
+}
+
+.right-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.right-box ul li {
+    font-size: 1.4em; /* Increased font size */
+    line-height: 1.6; /* Slightly reduced line height */
+    color: #555555;
+    margin-bottom: 15px; /* Slightly increased margin */
+    position: relative;
+    padding-left: 25px; /* Increased padding to accommodate larger bullet */
+}
+
+.right-box ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #FFD700; /* Gold bullet */
+    font-size: 1.5em; /* Larger bullet size */
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-box, .right-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+
+body {
+    overflow-x: hidden; /* This will prevent horizontal scrolling */
+}
+.container {
+    max-width: 100%; /* Ensure the container doesn't exceed the viewport width */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+/* Example of responsive width */
+.element {
+    width: 100%; /* Adjust width based on viewport */
+    max-width: 100%; /* Ensure element doesn't exceed viewport width */
+}
+/* Reset default margin and padding */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.form-container {
+    width: 90%; /* Width covers 90% of the screen */
+    max-width: 600px; /* Maximum width of the form container */
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #b71c1c; /* Maroon border */
+    border-radius: 8px;
+    background-color: #ffffff; /* White background inside the form container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* Media query for laptop screens and larger */
+@media (min-width: 1024px) {
+    .form-container {
+        width: 97%; /* Full width for laptop screens */
+        max-width: none; /* Remove max-width restriction */
+    }
+}
+h4 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea,
+input[type="file"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #141414;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+select {
+    appearance: none; /* Remove default appearance on select */
+    padding-right: 30px; /* Add space for the dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23b71c1c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px auto;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus,
+input[type="file"]:focus {
+    border-color: #ff5f5f;
+    box-shadow: 0 0 5px rgba(183, 28, 28, 0.5);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #b71c1c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #ff5f5f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+}
+/* CSS for textarea */
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #b71c1c;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    min-height: 150px; /* Set a minimum height for the textarea */
+    resize: vertical; /* Allow vertical resizing */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+textarea:focus {
+    border-color: #ff5f5f;
+    box-shadow: 0 0 5px rgba(183, 28, 28, 0.5);
+}
+/* Footer Container */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: #333;
+  color: #fff;
+  background-color: #150333;
+  font-size: 16px;
+  margin-top: 20px;
+  border: 2px solid #000; /* Add a black solid border */
+  border-radius: 10px; /* Apply a border radius of 10px */
+}
+.rainbow-heading {
+  display: inline-block; /* Ensure the heading behaves as an inline block */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: visible; /* Allow text to overflow the container */
+}
+
+/* Individual Columns */
+.column {
+  width: 250px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.column h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.column p {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.column p i {
+  margin-right: 5px;
+}
+
+.column p span {
+  font-weight: bold;
+}
+
+.column a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Rainbow Heading */
+.rainbow-heading {
+  background: linear-gradient(to right, #963d36, #b2685e, #c7977e, #a9d5b1, #7bbf8c, #5c93ab, #7b6cbf);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Centered Icons */
+.centered-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.centered-icons a {
+  margin-right: 20px;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Organizers */
+.organizers {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.organizer-column {
+  margin-right: 10px;
+}
+
+.organizer-column img {
+  max-width: 80px;
+  height: auto;
+}
+
+/* Year Line */
+.year-line {
+  background-color: #222;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+/* Styling for WOW Congress Secretariat paragraph */
+#congress-info {
+  color: #fff; /* White color */
+  margin-bottom: 0; /* Removed bottom margin for the secretariat info */
+  line-height: 1.6; /* Improved line spacing for the secretariat info */
+  font-size: 16px; /* Adjusted font size for the secretariat info */
+}
+/* Style for email-info paragraph */
+.email-info {
+  font-size: 16px; /* Set font size for the text */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center align items vertically */
+  margin-top: 10px; /* Add top margin between email-info paragraphs */
+}
+
+/* Style for envelope icon */
+.email-info i.fa-envelope {
+  margin-right: 8px; /* Space between icon and text */
+  color: white; /* Set icon color to white */
+}
+
+/* Style for email address link */
+.email-info a {
+  color: white; /* Set link text color to white */
+  text-decoration: none; /* Remove underline from link */
+}
+
+/* Hover effect for email address link */
+.email-info a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+/* Style for location-info paragraph */
+.location-info {
+  font-size: 16px; /* Set font size for the text */
+  margin-bottom: 20px; 
+  margin-top: 20px;/* Add bottom margin for spacing between paragraphs */
+}
+
+/* Style for map marker icon */
+.location-info i.fas.fa-map-marker-alt {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Style for country name */
+.location-info span {
+  font-weight: bold; /* Set font weight for country name */
+}
+
+
+header {
+    background-color: #333; /* Set header background to dark gray */
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px; /* Reduced padding to minimize navbar height */
+    background-color: #000; /* Set navbar background to black */
+    position: relative;
+    border-bottom: 2px solid gold; /* Add a golden line below the navbar */
+    font-size: 16px;
+}
+
+.navbar-logo img {
+    height: 60px; /* Increased the height of the logo */
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    height: 60px; /* Match the height of the logo */
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 100%; /* Make links the same height as the container */
+    padding: 0 10px;
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.navbar-links li a.active {
+    color: gold; /* Change text color to gold when active */
+    border-bottom: 2px solid gold; /* Add a golden line below the active link */
+}
+
+/* Hover effects for navbar links */
+.navbar-links li a:hover {
+    color: #000; /* Change text color to black on hover */
+    background-color: #fff; /* Change background color to white on hover */
+}
+
+/* Hamburger menu */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+
+
+/* Mobile styles */
+@media only screen and (max-width: 1024px) {
+    .navbar-links {
+        display: none; /* Hide the navbar links on mobile */
+        position: absolute;
+        top: 60px; /* Position below the logo */
+        right: 20px;
+        background-color: #000; /* Background color of dropdown */
+        width: 200px; /* Adjust the width as needed */
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show the navbar links when active */
+    }
+
+    .navbar-toggle {
+        display: flex; /* Show the hamburger menu on mobile */
+    }
+}
+
+/* Mobile Navbar */
+nav.mobile-nav {
+  display: none;
+  padding: 10px;
+  background: #0c0c0c;
+}
+
+nav.mobile-nav .hamburger {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+nav.mobile-nav .mobile-menu {
+  display: none; /* Hidden by default */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.mobile-nav .mobile-menu li {
+  margin: 10px 0;
+}
+
+nav.mobile-nav .mobile-menu li a {
+  font-family: "Open Sans";
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background: #0a0a0a;
+  border-radius: 5px;
+}
+
+nav.mobile-nav .mobile-menu li a:hover {
+  background: #6a3791;
+}
+
+/* Media Query for Mobile View */
+@media screen and (max-width: 768px) {
+  nav.desktop-nav {
+    display: none;
+  }
+
+  nav.mobile-nav {
+    display: block;
+  }
+}
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+
+#scrollToTopBtn.show {
+  display: flex; /* Show button when scrolled */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333; /* Darker black on hover */
+}
+
+#whatsapp-container {
+    position: fixed;
+    bottom: 20px; /* Adjust vertical position as needed */
+    right: 20px;  /* Adjust horizontal position as needed */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above the button */
+    left: 50%;
+    margin-left: -60px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  /* Basic reset for margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the main navbar */
+.main-navbar {
+  display: flex;
+  align-items: center;
+  background-color: #333; /* Adjust as needed */
+  padding: 10px 20px;
+}
+
+.wow-logo {
+  font-family: 'Heebo', 'Arial', sans-serif; /* Use Heebo or another beautiful font */
+  font-weight: bold;
+  font-size: 36px; /* Adjusted size to make it smaller */
+  color: #ffd700; /* Initial color */
+  position: relative; /* Needed for the pseudo-element */
+  padding: 10px; /* Add padding for space around the text */
+  display: inline-block; /* Ensures padding works correctly */
+  overflow: hidden; /* Hide the animated border line */
+  background: #333; /* Background color to match the navbar and ensure visibility */
+  border-radius: 50%; /* Ensure the border follows a circular path */
+}
+
+/* Rotating dashed border */
+.wow-logo::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%; /* Increased size to move it farther away */
+  height: 140%;
+  border: 2px dashed #bdbeba; /* Dashed border with initial color */
+  border-radius: 50%; /* Make it circular */
+  transform: translate(-50%, -50%); /* Center it around the text */
+  animation: rotate-border 4s linear infinite; /* Continuous rotation */
+}
+
+/* Keyframes for rotating the dashed border around the text */
+@keyframes rotate-border {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.guidelines-container {
+    width: 100%;
+    max-width: 1200px; /* Optional: Limits width for larger screens */
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem; /* Increased font size for better readability */
+}
+
+.heading {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 700; /* Bold heading */
+    font-size: 2rem; /* Larger font size for heading */
+}
+
+.guidelines-list {
+    list-style-type: disc;
+    padding-left: 1.5rem; /* Space for bullet points */
+    margin: 0; /* Remove margin for proper alignment */
+    line-height: 1.8; /* Increase line height for better readability */
+}
+
+.sub-points {
+    list-style-type: circle;
+    padding-left: 1.5rem; /* Space for sub-point bullets */
+    margin: 0; /* Remove margin for proper alignment */
+    line-height: 1.8; /* Increase line height for better readability */
+}
+
+.guidelines-list li, .sub-points li {
+    margin-bottom: 0.75rem; /* Space between lines for clarity */
+}
+
+.guidelines-list li ul {
+    margin-top: 0.5rem; /* Space above nested lists */
+    padding-left: 1.5rem; /* Indent nested list items */
+}
+
+.guidelines-list li.bold {
+    font-weight: 700; /* Make text bold */
+}
+.wow-logo {
+  font-family: 'Heebo', 'Arial', sans-serif; /* Use Heebo or another beautiful font */
+  font-weight: bold;
+  font-size: 36px; /* Adjusted size to make it smaller */
+  color: #ffd700; /* Initial color */
+  position: relative; /* Needed for the pseudo-element */
+  padding: 10px; /* Add padding for space around the text */
+  display: inline-block; /* Ensures padding works correctly */
+  overflow: hidden; /* Hide the animated border line */
+  background: #333; /* Background color to match the navbar and ensure visibility */
+  border-radius: 50%; /* Ensure the border follows a circular path */
+}
+
+/* Rotating dashed border */
+.wow-logo::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%; /* Increased size to move it farther away */
+  height: 140%;
+  border: 2px dashed #bdbeba; /* Dashed border with initial color */
+  border-radius: 50%; /* Make it circular */
+  transform: translate(-50%, -50%); /* Center it around the text */
+  animation: rotate-border 4s linear infinite; /* Continuous rotation */
+}
+
+/* Keyframes for rotating the dashed border around the text */
+@keyframes rotate-border {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* Dropdown Container */
+.dropdown {
+    position: relative; /* Position relative to enable absolute positioning of dropdown content */
+}
+
+/* Dropdown Button */
+.dropbtn {
+    color: white; /* Text color for dropdown button */
+    font-size: 1em; /* Font size for dropdown button */
+    background: none; /* No background for button */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px 15px; /* Padding around button */
+    display: block; /* Ensure the padding is clickable */
+}
+
+/* Dropdown Content */
+.dropdown-contentt {
+    display: none; /* Hide dropdown content by default */
+    position: absolute; /* Position dropdown content relative to dropdown container */
+    background-color: #ADD8E6; /* Lightish blue background for dropdown content */
+    min-width: 160px; /* Minimum width of dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow for dropdown */
+    z-index: 1; /* Ensure dropdown content is above other content */
+}
+
+/* Dropdown Links */
+.dropdown-contentt a {
+    color: #333; /* Dark text color for dropdown links */
+    padding: 12px 16px; /* Padding for dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensure padding is clickable */
+}
+
+/* Dropdown Link Hover */
+.dropdown-contentt a:hover {
+    background-color: #00008B; /* Dark blue background on hover */
+    color: white; /* Text color on hover */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-contentt {
+    display: block; /* Show dropdown content when hovering over dropdown container */
+}
+
+/* Style for Dropdown Button on Hover */
+.dropdown:hover .dropbtn {
+    background-color: #003366; /* Dark blue background on hover for button */
+}
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensures the button is above other elements */
+}
+
+#whatsapp-button img {
+  border-radius: 50%; /* Optional: makes the image round */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+
+#scrollToTopBtn.show {
+  display: flex; /* Show button when scrolled */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333; /* Darker black on hover */
+}
+.popup-message {
+    position: fixed;
+    bottom: 80px; /* Adjust this value as needed */
+    right: 30px; /* Move the popup a little to the left */
+    background-color: #333; /* Dark background color for better readability */
+    color: #fff; /* Light text color */
+    padding: 10px 20px 10px 20px; /* Adjust padding for more space on the left */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 3s infinite;
+    font-size: 14px; /* Adjust font size if needed */
+    font-weight: 600; /* Slightly bold text */
+    text-align: center; /* Center the text */
+}
+
+.popup-message::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position it at the bottom edge */
+    right: 10px; /* Adjust to align with the message box */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Adjust size of the triangle */
+    border-right: 10px solid transparent; /* Adjust size of the triangle */
+    border-top: 10px solid #333; /* Match the background color */
+}
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+    </style>
+</head>
+<body>
+  <nav class="main-navbar">
+    <div class="navbar-logo">
+      <span class="wow-logo">WOW</span>
+    </div>
+    <ul class="navbar-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li class="dropdown">
+          <a href="" class="dropbtn">AGENDA</a>
+          <div class="dropdown-contentt">
+            <a href="conference.html">Conference</a>
+            <a href="workshop.html">Workshop</a>
+          </div>
+        </li>
+        <li><a href="abstract.html">ABSTRACT</a></li>
+        <li><a href="awards.html">AWARDS</a></li>
+        <li><a href="register.html">REGISTER</a></li>
+        
+    </ul>
+  </nav>
+  <!-- Mobile Navbar -->
+<nav class="mobile-nav">
+    <div class="hamburger" id="hamburger">
+      &#9776; <!-- This is the hamburger icon -->
+    </div>
+    <ul class="mobile-menu" id="mobile-menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="aboutus.html">ABOUT US</a></li>
+      <li><a href="abstract.html">ABSTRACT</a></li>
+      <li><a href="awards.html">AWARDS</a></li>
+      <li><a href="register.html">REGISTER</a></li>
+    </ul>
+  </nav>
+  
+      <!-- end of navbar -->
+    </header>
+    <h1>SUBMIT ABSTRACT</h1>
+    <h2>@WOW DENTISTRY</h2>
+    <div class="container">
+        <div class="left-box">
+            <h3>CALL FOR PRESENTERS</h3>
+            <p><b>WOW DENTISTRY </b>Congress is a one-of-a-kind event that unites the most influential players and advocates in the women’s dental community to showcase and exchange their work on a global scale. We welcome submissions from renowned scientists, researchers, experienced academicians, and anyone who believes in empowering women by supporting fundraising activities.</p>
+            <p><b>The call for abstracts ran from JANUARY 30, 2024 until AUGUST 11, 2024.</b></p>
+           <p><b>Here are six compelling reasons to submit your abstract and become a part of the WOW program.</b></p> <ul>
+                <li>Present your work at an exclusive women’s congress and accelerate progress in the field.</li>
+                <li>Share your expertise with a diverse, multi-sectoral audience and gain recognition for your achievements.</li>
+                <li>Sketch your struggles and experience, your organization and your impactful achievements on a powerful platform.</li>
+                <li>Share your personal journey as a professional, entrepreneur, researcher, motivator, woman, daughter, sister, spouse, mother, or any other role you may play.</li>
+                <li>Connect with fellow professionals and gain valuable feedback and new insights.</li>
+                <li>Exchange best practices and establish meaningful connections with colleagues from all around the world.</li>
+            </ul>
+        </div>
+        <div class="right-box">
+            <h3>VALUE ADDED SESSIONS</h3>
+            <ul>
+                <li>Dental Aesthetics and Ergonomics</li>
+                <li>Laser and Cosmetic Dentistry</li>
+                <li>Oral and Maxillofacial Surgery</li>
+                <li>Oral Implantology and Periodontology</li>
+                <li>Endodontics and Prosthodontics</li>
+                <li>Orthodontics and Dentofacial Orthopedics</li>
+                <li>Pediatric Dentistry</li>
+                <li>Restorative and Esthetic Dentistry</li>
+                <li>Dental Laboratory Technology and CAD/CAM</li>
+                <li>Dental Hygiene and Nursing</li>
+                <li>Forensic and Microscopic Dentistry</li>
+                <li>Hypodontia and Sleep Apnea</li>
+            </ul>
+        </div>
+    </div>
+    <div class="guidelines-container">
+      <h1 class="heading">Submission Guidelines</h1>
+      <ul class="guidelines-list">
+          <li>All submissions should be made in English and only through the online submission platform.</li>
+          <li>Abstract proposal must be Word or PDF document with updated CV and recent photo along with the past presentation AV.</li>
+          <li>Abstracts submitted in another language than English will be automatically rejected.</li>
+          <li>The abstract must contain at least 1,500 characters and cannot contain more than 3,000 characters (blank spaces, punctuation as well as authors’ affiliation and titles included).</li>
+          <li>A prescribed format has been identified for each type of submission format:
+              <ul class="sub-points">
+                  <li>Scientific studies: Background, aim, methods, results, conclusions.</li>
+                  <li>Practice, policy, and advocacy reports: Background and context, aim, strategy/tactics, programme/policy process, outcomes, what was learnt (develop any replicability potential).</li>
+              </ul>
+          </li>
+          <li class="bold">Poster OR E-Poster Submission Guidelines:</li>
+              <ul class="sub-points">
+                  <li>Size: Standard size which is 4×8 foot space (48×96 inches) orientation.</li>
+                  <li>Content: Include title, authors, affiliations, abstract, sections (Introduction, Methods, Results, Discussion, Conclusion), and readable fonts (at least 18-point).</li>
+                  <li>Format: Submit as a PDF or image file.</li>
+              </ul>
+          </li>
+          <li>Please ensure that your abstract does not contain spelling, grammatical, or scientific errors. No corrections are possible after the submission. The abstract will be reproduced exactly as submitted. Please ensure that the abstract is complete. No proofreading will be done.</li>
+          <li>Abstracts should meet international ethical standards.</li>
+          <li>Abbreviations should be defined.</li>
+          <li>All graphics and supporting visuals need to be commented and with an explanatory title.</li>
+          <li>The submitting author accepts to declare all of the authors’ conflicts of interest for the last 5 years. An abstract or summary report cannot be accepted if the conflict-of-interest disclosure has not been ticked on the submission form. If the project or one of the co-authors has a conflict of interest, this must be clearly stated within the submission form and then, later, upon acceptance of the abstract, disclosed within the presentation.</li>
+          <li>Each author needs to have authorized the submitter to submit the abstract, and then, later, upon acceptance of the abstract, approved to have it presented at the Congress. The submission system will require co-authors details to notify them of the abstract submission.</li>
+          <li>Please ensure to mention all sources of information and references.</li>
+          <li>Once you have successfully submitted your abstract, you will receive a confirmation email with an abstract ID number, to use in any communication you might have with the organizers.</li>
+          <li>Abstracts can be re-edited and modified until you click “submit” for final submission. Once submitted, abstracts cannot be edited.</li>
+          <li>All abstracts should be finalized and submitted by AUGUST 11, 2024, at midnight PST.</li>
+      </ul>
+  </div>
+    
+    <div class="form-container">
+    <h4>CALL FOR PRESENTERS APPLICATION</h4>
+    <form action="process_form.php" method="POST">
+       
+        <label for="conference">Conference *</label>
+        <select id="conference" name="conference" required>
+            <option value="">Select the Conference</option>
+            
+            <option value="conference2">Dubai</option>
+            
+        </select>
+
+        <!-- Include other form fields here -->
+
+        <label for="firstName">First Name *</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Anderson" required>
+
+        <label for="lastName">Last Name *</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Mikoo" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="Enter your valid Email" required>
+
+        <label for="session">Session *</label>
+        <select id="session" name="session" required>
+            <option value="">Select Session</option>
+            <option value="session1">Dental Aesthetics and Ergonomics</option>
+            <option value="session2">Laser and Cosmetic Dentistry</option>
+            <option value="session3">Oral and Maxillofacial Surgery</option>
+            <option value="session3">Oral Implantology and Periodontology</option>
+            <option value="session3">Endodontics and Prosthodontics</option>
+            <option value="session3">Endodontics and Dentofacial</option>
+            <option value="session3">Pediatric Dentistry</option>
+            <option value="session3">Restorative and Esthetic Dentistry</option>
+        </select>
+
+        <label for="abstractCategory">Abstract Category *</label>
+        <select id="abstractCategory" name="abstractCategory" required>
+            <option value="">--Select Category--</option>
+            <option value="category1">Oral</option>
+            <option value="category2">Poster</option>
+            
+        </select>
+
+        
+
+        <label for="shortBio">Short Biography</label>
+        <textarea id="shortBio" name="shortBio" placeholder=></textarea>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+    </div>
+    <div class="footer">
+        <div class="column">
+          <h1 class="rainbow-heading">QUICK LINKS</h1>
+          <a href="index.html#team">TEAM</a>
+          <a href="awards.html">AWARDS</a>
+          <a href="register.html">REGISTER</a>
+          <a href="index.html#exhibit">EXHIBIT</a>
+      </div>
+  
+  
+    <div class="column">
+        <h1 class="rainbow-heading">WOW CONGRESS SECRETARIAT</h1>
+        <p id="congress-info" class="location-info">
+          <i class="fas fa-map-marker-alt"></i> 73 Oakfield Road East Ham, E6 1LN, London<br>
+          <span>UNITED KINGDOM</span>
+      </p>
+      
+      <p id="congress-info" class="location-info">
+          <i class="fas fa-map-marker-alt"></i> SHEIKHA NOORA TOWER, BARSHA HEIGHTS OFFICE #510, PO BOX 65621, Dubai, UAE
+      </p>
+      
+       <!-- Email addresses with envelope icons -->
+  <p class="email-info">
+    <i class="fa fa-envelope"></i> <a href="mailto:dentistry@wowcongress.com">dentistry@wowcongress.com</a>
+  </p>
+  
+  <p class="email-info">
+    <i class="fa fa-envelope"></i> <a href="mailto:aesthetics@wowcongress.com">aesthetics@wowcongress.com</a>
+  </p>
+  
+        <p id="congress-info">
+          <i class="fa fa-whatsapp"></i> +971 547086278
+        </p>
+    </div>
+  
+    <div class="column">
+        <h1 class="rainbow-heading">JOIN OUR COMMUNITY</h1>
+        <div class="social-icons centered-icons">
+            <a href="https://www.facebook.com/groups/1097918827444826" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/showcase/82836961/admin/feed/posts/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p id="congress-info">#wowdentistry #wowcongress</p>
+    </div>
+  
+    <div class="column">
+        <h1 class="rainbow-heading">ORGANIZERS</h1>
+        <div class="organizers">
+            <div class="organizer-column">
+                <img src="16.png" alt="Organizer 1">
+            </div>
+            <div class="organizer-column">
+                <img src="17.png" alt="Organizer 2">
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="year-line">
+    <p id="congress-info">© Copyright 2024 All rights reserved</p>
+  </div>
+  <button id="scrollToTopBtn" onclick="scrollToTop()">&uArr;</button>
+  <!-- WhatsApp Integration Button with Tooltip -->
+<div id="whatsapp-button" class="tooltip">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" style="width: 50px; height: 50px; cursor: pointer;">
+  <div class="popup-message">
+    <span>Need help?</span>
+    <span>Click me</span>
+</div>
+  <div id="whatsapp-message" style="display: none;">Hi *Wow congress*! I need more info about Wow congress https://wowcongress.com</div>
+</div>
+<script>
+  // Function to handle scroll behavior
+  function scrollToTop() {
+      // Scroll to the top of the document with smooth behavior
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  }
+  
+  // Event listener to show/hide scroll-to-top button based on scroll position
+  window.addEventListener('scroll', function() {
+      var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  
+      // Show button after scrolling down 300px
+      if (window.scrollY > 300) {
+          scrollToTopBtn.style.display = "block";
+      } else {
+          scrollToTopBtn.style.display = "none";
+      }
+  });
+  
+  
+  </script>
+<script>
+  // Function to open WhatsApp chat with specified message
+function openWhatsAppChat() {
+  // Replace '1234567890' with your WhatsApp number
+  var phoneNumber = '+971 55 909 8802';
+  
+  // Get the message from the hidden div
+  var message = document.getElementById('whatsapp-message').innerText;
+  
+  // Encode the message for use in URL
+  var encodedMessage = encodeURIComponent(message);
+
+  // Construct the WhatsApp URL with phone number and message
+  var whatsappURL = 'https://wa.me/' + 971559098802 + '/?text=' + encodedMessage;
+
+  // Open the WhatsApp chat window in a new tab
+  window.open(whatsappURL, '_blank');
+}
+
+// Event listener to open WhatsApp chat when button is clicked
+document.getElementById('whatsapp-button').addEventListener('click', function() {
+  // Open WhatsApp chat with specified message
+  openWhatsAppChat();
+  
+  // Hide the tooltip after button click
+  var tooltip = document.querySelector('.tooltip .tooltiptext');
+  if (tooltip) {
+    tooltip.style.visibility = 'hidden';
+    tooltip.style.opacity = 0;
+  }
+});
+
+</script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+     <script>
+          // Function to open WhatsApp chat with specified message
+        function openWhatsAppChat() {
+          // Replace '1234567890' with your WhatsApp number
+          var phoneNumber = '+971547086278';
+          
+          // Get the message from the hidden div
+          var message = document.getElementById('whatsapp-message').innerText;
+          
+          // Encode the message for use in URL
+          var encodedMessage = encodeURIComponent(message);
+        
+          // Construct the WhatsApp URL with phone number and message
+          var whatsappURL = 'https://wa.me/' + 971547086278 + '/?text=' + encodedMessage;
+        
+          // Open the WhatsApp chat window in a new tab
+          window.open(whatsappURL, '_blank');
+        }
+        
+        // Event listener to open WhatsApp chat when button is clicked
+        document.getElementById('whatsapp-button').addEventListener('click', function() {
+          // Open WhatsApp chat with specified message
+          openWhatsAppChat();
+          
+          // Hide the tooltip after button click
+          var tooltip = document.querySelector('.tooltip .tooltiptext');
+          if (tooltip) {
+            tooltip.style.visibility = 'hidden';
+            tooltip.style.opacity = 0;
+          }
+        });
+        
+        </script>
+        
+        
+        
+        
+        
+          
+        <!-- <div class="visme_d" data-title="Untitled Project" data-url="1jm8g8qw-untitled-project?sidebar=true" data-domain="forms" data-full-page="false" data-min-height="600px" data-form-id="49875"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script> -->
+        <!-- scripts -->
+        
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+        <script  src="./script.js"></script>
+          <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+           <script>
+         document.addEventListener('DOMContentLoaded', function () {
+          var swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            speed: 600, // Slide transition speed in milliseconds
+            autoplay: {
+              delay: 1000, // Autoplay delay in milliseconds
+            },
+            effect: 'coverflow', // Use the coverflow effect
+            coverflowEffect: {
+              rotate: 50, // Set rotation angle
+              stretch: 0, // Set stretch amount
+              depth: 100, // Set depth
+              modifier: 1, // Set scaling modifier
+              slideShadows: false, // Disable slide shadows
+            },
+            slidesPerView: 'auto', // Show as many slides as possible
+            centeredSlides: true, // Center the active slide
+            spaceBetween: 10,
+            // Add custom pagination if needed
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            on: {
+              slideChange: function () {
+                // Remove border from all slides
+                var slides = this.slides;
+                for (var i = 0; i < slides.length; i++) {
+                  slides[i].style.border = 'none';
+                }
+        
+                // Add thicker border to the center slide with pink color
+                var activeSlideIndex = this.activeIndex % slides.length;
+                slides[activeSlideIndex].style.border = '2px solid gold';
+              },
+            },
+          });
+        });
+        
+        // ye slider ke js hai uppar
+        // cards rakho effect jab things to do at wow ka banare slider best
+        
+           </script>
+         
+         <script>
+          // Get the section element
+          var section = document.getElementById("section");
+        
+          // Set the inline style for the top border
+          section.style.borderTop = "5px solid rgb(255, 215, 0)";
+          section.style.borderRight = "none";
+          section.style.borderBottom = "none";
+          section.style.borderLeft = "none";
+        </script>
+        <!-- ye uppar vali border top landing page radius ki hai -->
+        <script src="script.js"></script>
+        <script>
+          
+        // JavaScript function to toggle responsive navigation
+        function toggleNavbar() {
+            var x = document.getElementById("myTopnav");
+            if (x.className.indexOf("responsive") === -1) {
+                x.className += " responsive";
+            } else {
+                x.className = x.className.replace(" responsive", "");
+            }
+        }
+        
+        </script>
+        <script>
+          document.getElementById('hamburger').addEventListener('click', function() {
+          var menu = document.getElementById('mobile-menu');
+          if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+          } else {
+            menu.style.display = 'block';
+          }
+        });
+        
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarLinks = document.getElementById('navbar-links');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Toggle navbar links on hamburger menu click
+    navbarToggle.addEventListener('click', function () {
+        navbarLinks.classList.toggle('active');
+    });
+
+    // Highlight the current section on click
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+}
+.container {
+    height: 50vh; /* Set container height to 50% of viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top of the container */
+    background-image: url('bgt-transformed.jpeg'); /* Replace with your background image URL */
+    background-size: cover; /* Scale background image to cover entire container */
+    background-position: center bottom; /* Position background image at center bottom */
+    background-repeat: no-repeat;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    max-width: 100%; /* Ensure content does not exceed viewport width */
+    margin-bottom: 12px;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em; /* Base font size */
+    margin-top: 5vh; /* Adjust top margin based on viewport height */
+    font-family: 'heebo', Arial, sans-serif; /* Use Inter font for heading */
+}
+
+.action-box {
+    margin-top: 20px;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: black; /* Black background color for button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase; /* Convert text to uppercase */
+    box-shadow: 0 0 10px white; /* White glowing effect */
+    transition: box-shadow 0.3s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.action-button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4em; /* Increase font size for larger screens */
+       
+    }
+}
+.heebo-paragraph {
+        font-family: 'Heebo', Arial, sans-serif;
+        font-size: 18px; /* Increase font size */
+        padding: 0 40px; /* Add left and right padding */
+        margin-bottom: 20px; /* Add bottom margin for spacing between paragraphs */
+        margin-bottom: 10px;
+    }
+   
+    @media (max-width: 767px) {
+        /* Media query for screens up to 767px (typically mobile devices) */
+        .heebo-paragraph {
+            line-height: 1.6;
+            font-size: 24; /* Adjusted line height for mobile view */
+
+        }
+    }
+    .scroll-wrapper {
+    position: relative;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: hidden; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    max-width: 100vw;
+    padding: 20px 0;
+}
+
+.scroll-item {
+    width: calc(33.33% - 20px); /* Adjust based on number of visible items */
+    min-width: 200px; /* Minimum width of each item */
+    flex-shrink: 0;
+    margin: 0 10px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    padding: 20px; /* Padding inside each box */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    height: 250px; /* Set the height of each box */
+}
+
+.item-details {
+    padding: 10px;
+}
+
+/* Navigation controls for scrolling */
+.scroll-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Space between boxes and controls */
+}
+
+.scroll-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 60px;
+    margin-right: 90px;
+}
+
+.scroll-dots {
+    display: flex;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .scroll-item {
+        width: 100%; /* Display one item per row on mobile */
+        height: auto; /* Adjust height based on content */
+        margin: 0; /* Remove horizontal margin */
+        align-items: center;
+    }
+}
+h3{
+    color: black;
+    font-family: 'Heebo', Arial, sans-serif;
+    font-weight: 900;
+}
+p{
+    color: #181717;
+    font-size: 17px;
+    font-family: 'Heebo', Arial, sans-serif;
+    font-weight: 500;
+    
+    
+}
+#item-details2 p{
+    font-size: 16px;
+}
+.item-description {
+    /* Style for the description text */
+    
+    text-align: left; /* Align text to the left */
+}
+h4 {
+    text-align: center;
+    font-family: 'Heebo', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    padding: 10px 20px;
+    color: #ffffff; /* Text color */
+    background-color: #ffbf00; /* Golden background color */
+
+    /* Glowing border effect */
+    box-shadow: 0 0 10px rgba(255, 191, 0, 0.5); /* Golden glowing effect */
+    text-shadow: 0 0 10px rgba(255, 191, 0, 0.5); /* Text glowing effect */
+}
+/* Base styles for the nomination box */
+.nomination-box {
+    overflow-x: hidden;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-image: url('gtyt.avif'); /* Specify your background image URL */
+    background-size: cover;
+    text-align: left;
+    color: #fff; /* Text color */
+    margin-top: 35px;
+    position: relative; /* Needed for pseudo-element */
+    overflow: hidden; /* Ensure the box doesn't overflow */
+    animation: glowing-border 2s ease-in-out infinite alternate; /* Apply the glowing animation */
+    border: 2px solid transparent; /* Transparent border for initial state */
+}
+/* Mobile view adjustment */
+@media (max-width: 768px) {
+    .nomination-box {
+        width: 90%;
+    }
+}
+/* Keyframe animation for the glowing effect */
+@keyframes glowing-border {
+    0% {
+        box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.7); /* Initial golden glowing effect */
+        border-color: rgba(255, 215, 0, 0.7); /* Initial golden border color */
+    }
+    50% {
+        box-shadow: 0 0 30px 8px rgba(255, 215, 0, 0.9); /* Intensified golden glowing effect */
+        border-color: rgba(255, 215, 0, 0.9); /* Intensified golden border color */
+    }
+    100% {
+        box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.7); /* Return to initial golden glowing effect */
+        border-color: rgba(255, 215, 0, 0.7); /* Return to initial golden border color */
+    }
+}
+
+        h5 {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        a {
+            color: #ffcc00; /* Yellow color for links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .form-container {
+    width: 99%;
+    margin: 30px auto; /* Added margin-top for spacing */
+    padding: 30px;
+    border: 4px solid #c282c2;
+    border-radius: 8px;
+    background-image: url('gty.avif'); /* Replace 'gty.avif' with your desired background image URL */
+    background-size: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Mobile view adjustment */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #ffff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+input, select, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333333; /* Text color for inputs and textareas */
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #18191a;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9d58b3;
+}
+
+.declaration {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333; /* Set header background to dark gray */
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px; /* Reduced padding to minimize navbar height */
+    background-color: #000; /* Set navbar background to black */
+    position: relative;
+    border-bottom: 2px solid gold; /* Add a golden line below the navbar */
+    font-size: 16px;
+    height: 70px; /* Set a specific height for the navbar */
+}
+
+.navbar-logo img {
+    height: 60px; /* Increased the height of the logo */
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    height: 60px; /* Match the height of the logo */
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 100%; /* Make links the same height as the container */
+    padding: 0 10px;
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.navbar-links li a.active {
+    color: gold; /* Change text color to gold when active */
+    border-bottom: 2px solid gold; /* Add a golden line below the active link */
+}
+
+/* Hover effects for navbar links */
+.navbar-links li a:hover {
+    color: #000; /* Change text color to black on hover */
+    background-color: #fff; /* Change background color to white on hover */
+}
+
+/* Hamburger menu */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+
+
+/* Mobile styles */
+@media only screen and (max-width: 1024px) {
+    .navbar-links {
+        display: none; /* Hide the navbar links on mobile */
+        position: absolute;
+        top: 60px; /* Position below the logo */
+        right: 20px;
+        background-color: #000; /* Background color of dropdown */
+        width: 200px; /* Adjust the width as needed */
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show the navbar links when active */
+    }
+
+    .navbar-toggle {
+        display: flex; /* Show the hamburger menu on mobile */
+    }
+}
+
+/* Mobile Navbar */
+nav.mobile-nav {
+  display: none;
+  padding: 10px;
+  background: #0c0c0c;
+}
+
+nav.mobile-nav .hamburger {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+nav.mobile-nav .mobile-menu {
+  display: none; /* Hidden by default */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.mobile-nav .mobile-menu li {
+  margin: 10px 0;
+}
+
+nav.mobile-nav .mobile-menu li a {
+  font-family: "Open Sans";
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background: #0a0a0a;
+  border-radius: 5px;
+}
+
+nav.mobile-nav .mobile-menu li a:hover {
+  background: #6a3791;
+}
+
+/* Media Query for Mobile View */
+@media screen and (max-width: 768px) {
+  nav.desktop-nav {
+    display: none;
+  }
+
+  nav.mobile-nav {
+    display: block;
+  }
+}
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+
+#scrollToTopBtn.show {
+  display: flex; /* Show button when scrolled */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333; /* Darker black on hover */
+}
+
+#whatsapp-container {
+    position: fixed;
+    bottom: 20px; /* Adjust vertical position as needed */
+    right: 20px;  /* Adjust horizontal position as needed */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above the button */
+    left: 50%;
+    margin-left: -60px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+/* Footer Container */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: #333;
+  color: #fff;
+  background-color: #150333;
+  font-size: 16px;
+  margin-top: 20px;
+  border: 2px solid #000; /* Add a black solid border */
+  border-radius: 10px; /* Apply a border radius of 10px */
+}
+.rainbow-heading {
+  display: inline-block; /* Ensure the heading behaves as an inline block */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: visible; /* Allow text to overflow the container */
+}
+
+/* Individual Columns */
+.column {
+  width: 250px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.column h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.column p {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.column p i {
+  margin-right: 5px;
+}
+
+.column p span {
+  font-weight: bold;
+}
+
+.column a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Rainbow Heading */
+.rainbow-heading {
+  background: linear-gradient(to right, #963d36, #b2685e, #c7977e, #a9d5b1, #7bbf8c, #5c93ab, #7b6cbf);
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Centered Icons */
+.centered-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.centered-icons a {
+  margin-right: 20px;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Organizers */
+.organizers {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.organizer-column {
+  margin-right: 10px;
+}
+
+.organizer-column img {
+  max-width: 80px;
+  height: auto;
+}
+
+/* Year Line */
+.year-line {
+  background-color: #222;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+/* Styling for WOW Congress Secretariat paragraph */
+#congress-info {
+  color: #fff; /* White color */
+  margin-bottom: 0; /* Removed bottom margin for the secretariat info */
+  line-height: 1.6; /* Improved line spacing for the secretariat info */
+  font-size: 16px; /* Adjusted font size for the secretariat info */
+}
+/* Style for email-info paragraph */
+.email-info {
+  font-size: 16px; /* Set font size for the text */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center align items vertically */
+  margin-top: 10px; /* Add top margin between email-info paragraphs */
+}
+
+/* Style for envelope icon */
+.email-info i.fa-envelope {
+  margin-right: 8px; /* Space between icon and text */
+  color: white; /* Set icon color to white */
+}
+
+/* Style for email address link */
+.email-info a {
+  color: white; /* Set link text color to white */
+  text-decoration: none; /* Remove underline from link */
+}
+
+/* Hover effect for email address link */
+.email-info a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+/* Style for location-info paragraph */
+.location-info {
+  font-size: 16px; /* Set font size for the text */
+  margin-bottom: 20px; 
+  margin-top: 20px;/* Add bottom margin for spacing between paragraphs */
+}
+
+/* Style for map marker icon */
+.location-info i.fas.fa-map-marker-alt {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Style for country name */
+.location-info span {
+  font-weight: bold; /* Set font weight for country name */
+}
+.wow-logo {
+  font-family: 'Heebo', 'Arial', sans-serif; /* Use Heebo or another beautiful font */
+  font-weight: bold;
+  font-size: 36px; /* Adjusted size to make it smaller */
+  color: #ffd700; /* Initial color */
+  position: relative; /* Needed for the pseudo-element */
+  padding: 10px; /* Add padding for space around the text */
+  display: inline-block; /* Ensures padding works correctly */
+  overflow: hidden; /* Hide the animated border line */
+  background: #333; /* Background color to match the navbar and ensure visibility */
+  border-radius: 50%; /* Ensure the border follows a circular path */
+}
+
+/* Rotating dashed border */
+.wow-logo::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%; /* Increased size to move it farther away */
+  height: 140%;
+  border: 2px dashed #bdbeba; /* Dashed border with initial color */
+  border-radius: 50%; /* Make it circular */
+  transform: translate(-50%, -50%); /* Center it around the text */
+  animation: rotate-border 4s linear infinite; /* Continuous rotation */
+}
+
+/* Keyframes for rotating the dashed border around the text */
+@keyframes rotate-border {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* Dropdown Container */
+.dropdown {
+    position: relative; /* Position relative to enable absolute positioning of dropdown content */
+}
+
+/* Dropdown Button */
+.dropbtn {
+    color: white; /* Text color for dropdown button */
+    font-size: 1em; /* Font size for dropdown button */
+    background: none; /* No background for button */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px 15px; /* Padding around button */
+    display: block; /* Ensure the padding is clickable */
+}
+
+/* Dropdown Content */
+.dropdown-contentt {
+    display: none; /* Hide dropdown content by default */
+    position: absolute; /* Position dropdown content relative to dropdown container */
+    background-color: #ADD8E6; /* Lightish blue background for dropdown content */
+    min-width: 160px; /* Minimum width of dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow for dropdown */
+    z-index: 1; /* Ensure dropdown content is above other content */
+}
+
+/* Dropdown Links */
+.dropdown-contentt a {
+    color: #333; /* Dark text color for dropdown links */
+    padding: 12px 16px; /* Padding for dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensure padding is clickable */
+}
+
+/* Dropdown Link Hover */
+.dropdown-contentt a:hover {
+    background-color: #00008B; /* Dark blue background on hover */
+    color: white; /* Text color on hover */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-contentt {
+    display: block; /* Show dropdown content when hovering over dropdown container */
+}
+
+/* Style for Dropdown Button on Hover */
+.dropdown:hover .dropbtn {
+    background-color: #003366; /* Dark blue background on hover for button */
+}
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensures the button is above other elements */
+}
+
+#whatsapp-button img {
+  border-radius: 50%; /* Optional: makes the image round */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+
+#scrollToTopBtn.show {
+  display: flex; /* Show button when scrolled */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #333; /* Darker black on hover */
+}
+.popup-message {
+    position: fixed;
+    bottom: 80px; /* Adjust this value as needed */
+    right: 30px; /* Move the popup a little to the left */
+    background-color: #333; /* Dark background color for better readability */
+    color: #fff; /* Light text color */
+    padding: 10px 20px 10px 20px; /* Adjust padding for more space on the left */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 3s infinite;
+    font-size: 14px; /* Adjust font size if needed */
+    font-weight: 600; /* Slightly bold text */
+    text-align: center; /* Center the text */
+}
+
+.popup-message::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position it at the bottom edge */
+    right: 10px; /* Adjust to align with the message box */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Adjust size of the triangle */
+    border-right: 10px solid transparent; /* Adjust size of the triangle */
+    border-top: 10px solid #333; /* Match the background color */
+}
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+    </style>
+</head>
+<body>
+  <nav class="main-navbar">
+    <div class="navbar-logo">
+      <span class="wow-logo">WOW</span>
+    </div>
+    <ul class="navbar-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li class="dropdown">
+          <a href="" class="dropbtn">AGENDA</a>
+          <div class="dropdown-contentt">
+            <a href="conference.html">Conference</a>
+            <a href="workshop.html">Workshop</a>
+          </div>
+        </li>
+        <li><a href="abstract.html">ABSTRACT</a></li>
+        <li><a href="awards.html">AWARDS</a></li>
+        <li><a href="register.html">REGISTER</a></li>
+        
+    </ul>
+  </nav>
+  <!-- Mobile Navbar -->
+<nav class="mobile-nav">
+    <div class="hamburger" id="hamburger">
+      &#9776; <!-- This is the hamburger icon -->
+    </div>
+    <ul class="mobile-menu" id="mobile-menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="aboutus.html">ABOUT US</a></li>
+      <li><a href="abstract.html">ABSTRACT</a></li>
+      <li><a href="awards.html">AWARDS</a></li>
+      <li><a href="register.html">REGISTER</a></li>
+    </ul>
+  </nav>
+      <!-- end of navbar -->
+    </header>
+    <div class="container">
+        <div class="content">
+            <h1>WOW AWARDS <br>2024</h1>
+            <div class="action-box">
+                <a href="#" class="action-button">Nominate & Rediscover Yourself</a>
+            </div>
+        </div>
+    </div>
+    <p class="heebo-paragraph">
+        <b>WOW AWARDS</b> exclusive gateway that honors the inspiring stories of women across professions who have made a significant impact by <b>promoting diversity, equity,</b> and <b>inclusion.</b> These women are driven by a deep sense of <b>emotion, empathy,</b> and <b>embrace of others,</b> and are committed to the idea of <b>emerging, encouraging, empowering,</b> and <b>enlightening kinship</b> and <b>leadership.</b>
+    </p>
+    <p class="heebo-paragraph">
+        We believe that the <b>recognition</b> of women’s achievements has the power to bring about a profound <b>transformation for women</b> of all ages worldwide. By taking into account key global policy documents on gender equality and setting strategic objectives and actions, we can advance women and achieve true gender equality.
+    </p>
+    <p class="heebo-paragraph">
+        These awards not only acknowledge the individual accomplishments of women in dentistry but also inspire future generations of women to pursue careers in this important field. The <b>WOW Awards</b> are a testament to the belief that gender diversity and inclusivity are essential for progress in DENTISTRY & FACIAL AESTHETICS. By recognizing the exceptional talent and dedication of women professionals, these awards aim to create a more equitable and inclusive landscape in which all voices are heard and valued.
+    </p>
+  
+<h4>AWARD CATEGORIES</h4>
+    <div class="scroll-container">
+      <div class="scroll-item" style="background-image: linear-gradient(rgba(219, 210, 80, 0.3), rgba(255, 255, 255, 0.3)), url('piu.avif');text-shadow: 4px 4px 4px rgba(228, 216, 56, 0.952); padding: 20px; font-weight: 900;" >
+            <h3>HALL OF FAME </h3>
+            <div class="item-details">
+                <p class="item-description" >These awards celebrate women who have achieved remarkable accomplishments in their careers or fields of expertise. They recognize women who have excelled in their professions, overcome challenges, and made significant strides in their chosen areas.</p>
+            </div>
+        </div>
+
+        <div class="scroll-item" style="background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('piu.avif');">
+            <h3>WOMEN LEADER AWARDS</h3>
+            <div class="item-details">
+                <p class="item-description">These awards honor women who have demonstrated exceptional leadership skills and qualities in their respective fields.</p>
+            </div>
+        </div>
+
+        <div class="scroll-item" style="background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('piu.avif');">
+            <h3>MENTORSHIP AND ADVOCACY AWARDS</h3>
+            <div class="item-details2">
+                <p class="item-description">These awards honor women who have demonstrated outstanding mentorship, guidance, and support for others. They recognize women who have made a significant impact by mentoring and advocating for the personal and professional development of other women.</p>
+            </div>
+        </div>
+
+        <div class="scroll-item" style="background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('piu.avif');">
+            <h3>EMERGE AWARDS</h3>
+            <div class="item-details">
+                <p class="item-description">Supporting and encouraging early-career women in DENTISTRY & FACIAL AESTHETICS who have shown exceptional promise, leadership potential, and early achievements in their respective fields, patient care, or advocacy.</p>
+            </div>
+        </div>
+
+        <div class="scroll-item" style="background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('piu.avif');">
+            <h3>BUSINESS AWARDS</h3>
+            <div class="item-details">
+                <p class="item-description">Recognizing outstanding businesses and professionals who’ve left a lasting mark globally as executives, enterprises, and innovators in product development and client servicing. Their contributions have enhanced healthcare, research, and global prevention efforts.</p>
+            </div>
+        </div>
+
+        <div class="scroll-item" style="background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('piu.avif');">
+            <h3>RESEARCH & INNOVATION AWARDS</h3>
+            <div class="item-details">
+                <p class="item-description">Acknowledging women researchers who have made groundbreaking contributions to DENTISTRY & FACIAL AESTHETICS through innovative research projects, discoveries, or advancements in oral biology, treatment, or prevention.</p>
+            </div>
+        </div>
+
+        <div class="scroll-item" style="background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('piu.avif');">
+            <h3>SOCIAL IMPACT & HUMANITARIAN AWARDS</h3>
+            <div class="item-details2">
+                <p class="item-description">These awards honor women who have made a positive impact on society and worked tirelessly to improve the lives of others. They recognize women who have made a difference through philanthropy, advocacy, community service, or humanitarian efforts.</p>
+            </div>
+        </div>
+
+        <div class="scroll-item" style="background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('piu.avif');">
+            <h3>SCHOLARS AWARDS</h3>
+            <div class="item-details">
+                <p class="item-description">Acknowledging students and young researchers who have made  exceptional contribution in academics, research, digital arts and early achievements in their respective fields or advocacy.</p>
+            </div>
+        </div>
+    </div>
+  <!-- Navigation controls for scrolling -->
+  <div class="scroll-controls">
+    
+    <div class="scroll-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <!-- Add more dots as needed based on the number of items -->
+    </div>
+    <button class="scroll-btn prev" onclick="scrollContainer('prev')">&lt;</button>
+<button class="scroll-btn next" onclick="scrollContainer('next')">&gt;</button>
+
+</div>
+</div>
+<div class="nomination-box">
+    <h5>AWARD NOMINATIONS GUIDELINES</h5>
+    <ul>
+        <li>English is the official language of communication; all communication sent should be in English for the jury's convenience.</li>
+        <li>All nominations must be submitted on the <a href="https://wowcongress.com/official-nomination" target="_blank">official link of WOWCONGRESS site</a> only.</li>
+        <li>For each category, a separate nomination needs to be filled. You may nominate in as many categories as you wish.</li>
+        <li>All information provided in the nominations will be treated as confidential and accessed only by jury members and WOWCONGRESS Management.</li>
+        <li>All information asked in the nomination form is mandatory.</li>
+        <li>Nominees will be contacted to provide additional information to support their nomination.</li>
+        <li>The winner will be announced by the jury members or WOWCONGRESS Management.</li>
+        <li>WOWCONGRESS Management will confirm receipt of nominations to nominators by email.</li>
+        <li>For any queries, contact <a href="mailto:dentistry@wowcongress.com">dentistry@wowcongress.com</a>.</li>
+    </ul>
+</div>
+<div class="form-container">
+    <h5>AWARD NOMINATION FORM</h5>
+    <form id="nomination-form">
+        <label for="venue">Venue *</label>
+        <select id="venue" name="venue">
+            <option value="" disabled selected>Select the Conference</option>
+            <option value="session1">Dubai</option>
+            <option value="session2">Istanbul</option>
+        </select>
+        
+
+        <label for="category">Award Category *</label>
+        <select id="category" name="category">
+            <option value="" disabled selected>Select session</option>
+            <option value="session1">HALL OF FAME</option>
+            <option value="session2">WOMEN LEADER AWARDS</option>
+            <option value="session2">MENTORSHIP AND ADVOCACY AWARD</option>
+            <option value="session2">EMERGE AWARDS</option>
+            <option value="session2">BUSINESS AWARDS</option>
+            <option value="session2">RESEARCH & INNOVATION AWARDS</option>
+            <option value="session2">SOCIAL IMPACT & HUMANITARIAN AWARDS</option>
+            <option value="session2">SCHOLARS AWARDS</option>
+        </select>
+
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name " required>
+
+        <label for="country">Country *</label>
+        <input type="text" id="country" name="country" placeholder="Enter your country name " required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="Enter your valid Email" required>
+
+        <label for="telephone">Telephone *</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="Enter your valid Phone Number" required>
+
+
+        <div class="declaration">
+            <p>
+                <input type="checkbox" id="declarationCheckbox" required>
+                <label for="declarationCheckbox">
+                    I confirm that I am the person submitting this entry, and that to the best of my knowledge and belief, the information provided in this application is true and complete. I have included all the information specified in the checklist above.
+                </label>
+            </p>
+            <p>
+                <input type="checkbox" id="nomineeRightCheckbox">
+                <label for="nomineeRightCheckbox">
+                    I understand that the judges retain the right to nominate me/the nominee for categories different from the ones specified above if they deem it appropriate.
+                </label>
+            </p>
+            <p>
+                <input type="checkbox" id="informationUsageCheckbox">
+                <label for="informationUsageCheckbox">
+                    I understand that information from my application (including photography) may be used for press and publicity purposes.
+                </label>
+            </p>
+        </div>
+
+        <button type="submit" id="submitButton" disabled>Submit</button>
+    </form>
+</div>
+
+<div class="footer">
+    <div class="column">
+      <h1 class="rainbow-heading">QUICK LINKS</h1>
+      <a href="index.html#team">TEAM</a>
+      <a href="awards.html">AWARDS</a>
+      <a href="register.html">REGISTER</a>
+      <a href="index.html#exhibit">EXHIBIT</a>
+  </div>
+  
+  
+    <div class="column">
+        <h1 class="rainbow-heading">WOW CONGRESS SECRETARIAT</h1>
+        <p id="congress-info" class="location-info">
+          <i class="fas fa-map-marker-alt"></i> 73 Oakfield Road East Ham, E6 1LN, London<br>
+          <span>UNITED KINGDOM</span>
+      </p>
+      
+     
+      
+       <!-- Email addresses with envelope icons -->
+  <p class="email-info">
+    <i class="fa fa-envelope"></i> <a href="mailto:dentistry@wowcongress.com">dentistry@wowcongress.com</a>
+  </p>
+  
+ 
+  
+        <p id="congress-info">
+          <i class="fa fa-whatsapp"></i> +971 55909 8802
+        </p>
+    </div>
+  
+    <div class="column">
+        <h1 class="rainbow-heading">JOIN OUR COMMUNITY</h1>
+        <div class="social-icons centered-icons">
+            <a href="https://www.facebook.com/groups/1097918827444826" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/showcase/82836961/admin/feed/posts/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p id="congress-info">#wowdentistry #wowcongress</p>
+    </div>
+  
+    <div class="column">
+        <h1 class="rainbow-heading">ORGANIZERS</h1>
+        <div class="organizers">
+            <div class="organizer-column">
+                <img src="16.png" alt="Organizer 1">
+            </div>
+            <div class="organizer-column">
+                <img src="17.png" alt="Organizer 2">
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="year-line">
+    <p id="congress-info">© Copyright 2024 All rights reserved</p>
+  </div>
+  <button id="scrollToTopBtn" onclick="scrollToTop()">&uArr;</button>
+  <!-- WhatsApp Integration Button with Tooltip -->
+<div id="whatsapp-button" class="tooltip">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" style="width: 50px; height: 50px; cursor: pointer;">
+  <div class="popup-message">
+    <span>Need help?</span>
+    <span>Click me</span>
+</div>
+  <div id="whatsapp-message" style="display: none;">Hi *Wow congress*! I need more info about Wow congress https://wowcongress.com</div>
+</div>
+<script>
+  // Function to handle scroll behavior
+  function scrollToTop() {
+      // Scroll to the top of the document with smooth behavior
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  }
+  
+  // Event listener to show/hide scroll-to-top button based on scroll position
+  window.addEventListener('scroll', function() {
+      var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  
+      // Show button after scrolling down 300px
+      if (window.scrollY > 300) {
+          scrollToTopBtn.style.display = "block";
+      } else {
+          scrollToTopBtn.style.display = "none";
+      }
+  });
+  
+  
+  </script>
+<script>
+  // Function to open WhatsApp chat with specified message
+function openWhatsAppChat() {
+  // Replace '1234567890' with your WhatsApp number
+  var phoneNumber = '+971 55 909 8802';
+  
+  // Get the message from the hidden div
+  var message = document.getElementById('whatsapp-message').innerText;
+  
+  // Encode the message for use in URL
+  var encodedMessage = encodeURIComponent(message);
+
+  // Construct the WhatsApp URL with phone number and message
+  var whatsappURL = 'https://wa.me/' + 971559098802 + '/?text=' + encodedMessage;
+
+  // Open the WhatsApp chat window in a new tab
+  window.open(whatsappURL, '_blank');
+}
+
+// Event listener to open WhatsApp chat when button is clicked
+document.getElementById('whatsapp-button').addEventListener('click', function() {
+  // Open WhatsApp chat with specified message
+  openWhatsAppChat();
+  
+  // Hide the tooltip after button click
+  var tooltip = document.querySelector('.tooltip .tooltiptext');
+  if (tooltip) {
+    tooltip.style.visibility = 'hidden';
+    tooltip.style.opacity = 0;
+  }
+});
+
+</script>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    <script src="scripts.js"></script>
+ <script>
+// Function to handle scroll navigation
+function scrollContainer(direction) {
+    const container = document.querySelector('.scroll-container');
+    const containerWidth = container.clientWidth;
+    const scrollAmount = containerWidth; // Scroll by one container width
+
+    let scrollPosition = container.scrollLeft;
+
+    if (direction === 'prev') {
+        scrollPosition -= scrollAmount;
+    } else if (direction === 'next') {
+        scrollPosition += scrollAmount;
+    }
+
+    // Calculate the nearest scroll snap point based on container width
+    scrollPosition = Math.round(scrollPosition / containerWidth) * containerWidth;
+
+    // Ensure scroll position stays within valid bounds
+    scrollPosition = Math.max(0, Math.min(scrollPosition, container.scrollWidth - containerWidth));
+
+    // Smooth scroll animation using scrollTo and scrollLeft
+    container.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+    });
+}
+
+
+
+
+
+ </script>
+ <script>
+    const declarationCheckbox = document.getElementById('declarationCheckbox');
+    const nomineeRightCheckbox = document.getElementById('nomineeRightCheckbox');
+    const informationUsageCheckbox = document.getElementById('informationUsageCheckbox');
+    const submitButton = document.getElementById('submitButton');
+
+    declarationCheckbox.addEventListener('change', toggleSubmitButton);
+    nomineeRightCheckbox.addEventListener('change', toggleSubmitButton);
+    informationUsageCheckbox.addEventListener('change', toggleSubmitButton);
+
+    function toggleSubmitButton() {
+        if (declarationCheckbox.checked && nomineeRightCheckbox.checked && informationUsageCheckbox.checked) {
+            submitButton.disabled = false;
+        } else {
+            submitButton.disabled = true;
+        }
+    }
+</script>
+<script>
+    // Function to handle scroll behavior
+    function scrollToTop() {
+        // Scroll to the top of the document with smooth behavior
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    
+    // Event listener to show/hide scroll-to-top button based on scroll position
+    window.addEventListener('scroll', function() {
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    
+        // Show button after scrolling down 300px
+        if (window.scrollY > 300) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    });
+    
+    
+    </script>
+    <!-- WhatsApp Integration Button with Tooltip -->
+    
+    
+    <script>
+      // Function to open WhatsApp chat with specified message
+    function openWhatsAppChat() {
+      // Replace '1234567890' with your WhatsApp number
+      var phoneNumber = '+971547086278';
+      
+      // Get the message from the hidden div
+      var message = document.getElementById('whatsapp-message').innerText;
+      
+      // Encode the message for use in URL
+      var encodedMessage = encodeURIComponent(message);
+    
+      // Construct the WhatsApp URL with phone number and message
+      var whatsappURL = 'https://wa.me/' + 971547086278 + '/?text=' + encodedMessage;
+    
+      // Open the WhatsApp chat window in a new tab
+      window.open(whatsappURL, '_blank');
+    }
+    
+    // Event listener to open WhatsApp chat when button is clicked
+    document.getElementById('whatsapp-button').addEventListener('click', function() {
+      // Open WhatsApp chat with specified message
+      openWhatsAppChat();
+      
+      // Hide the tooltip after button click
+      var tooltip = document.querySelector('.tooltip .tooltiptext');
+      if (tooltip) {
+        tooltip.style.visibility = 'hidden';
+        tooltip.style.opacity = 0;
+      }
+    });
+    
+    </script>
+    
+    
+    
+    
+    
+      
+    <!-- <div class="visme_d" data-title="Untitled Project" data-url="1jm8g8qw-untitled-project?sidebar=true" data-domain="forms" data-full-page="false" data-min-height="600px" data-form-id="49875"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script> -->
+    <!-- scripts -->
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+    <script  src="./script.js"></script>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+       <script>
+     document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        speed: 600, // Slide transition speed in milliseconds
+        autoplay: {
+          delay: 1000, // Autoplay delay in milliseconds
+        },
+        effect: 'coverflow', // Use the coverflow effect
+        coverflowEffect: {
+          rotate: 50, // Set rotation angle
+          stretch: 0, // Set stretch amount
+          depth: 100, // Set depth
+          modifier: 1, // Set scaling modifier
+          slideShadows: false, // Disable slide shadows
+        },
+        slidesPerView: 'auto', // Show as many slides as possible
+        centeredSlides: true, // Center the active slide
+        spaceBetween: 10,
+        // Add custom pagination if needed
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        on: {
+          slideChange: function () {
+            // Remove border from all slides
+            var slides = this.slides;
+            for (var i = 0; i < slides.length; i++) {
+              slides[i].style.border = 'none';
+            }
+    
+            // Add thicker border to the center slide with pink color
+            var activeSlideIndex = this.activeIndex % slides.length;
+            slides[activeSlideIndex].style.border = '2px solid gold';
+          },
+        },
+      });
+    });
+    
+    // ye slider ke js hai uppar
+    // cards rakho effect jab things to do at wow ka banare slider best
+    
+       </script>
+     
+     <script>
+      // Get the section element
+      var section = document.getElementById("section");
+    
+      // Set the inline style for the top border
+      section.style.borderTop = "5px solid rgb(255, 215, 0)";
+      section.style.borderRight = "none";
+      section.style.borderBottom = "none";
+      section.style.borderLeft = "none";
+    </script>
+    <!-- ye uppar vali border top landing page radius ki hai -->
+    <script src="script.js"></script>
+    <script>
+      
+    // JavaScript function to toggle responsive navigation
+    function toggleNavbar() {
+        var x = document.getElementById("myTopnav");
+        if (x.className.indexOf("responsive") === -1) {
+            x.className += " responsive";
+        } else {
+            x.className = x.className.replace(" responsive", "");
+        }
+    }
+    
+    </script>
+    <script>
+      document.getElementById('hamburger').addEventListener('click', function() {
+      var menu = document.getElementById('mobile-menu');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    });
+    
+    </script>
+</body>
+</html>
